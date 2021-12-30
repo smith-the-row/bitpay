@@ -1,0 +1,13 @@
+.info__container {
+    width:80%;
+    margin: 3rem auto;
+}
+
+.info__title {
+    text-align: center;
+}
+
+.info__about {
+    text-align: center;
+    margin: 1rem auto;
+}

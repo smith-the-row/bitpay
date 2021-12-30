@@ -1,0 +1,36 @@
+.form__card {
+  width: 40%;
+  margin: auto;
+}
+
+.block {
+  width: 100% !important;
+}
+
+.form-control {
+  border: 1px solid gray !important;
+  outline: none !important;
+}
+
+.form {
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+.form__card {
+  background-color: white;
+}
+
+.t-m {
+  color: #27ae61;
+}
+
+.t-m:hover {
+  color: #27ae61;
+}
+
+@media screen and (max-width: 780px) {
+  .form__card {
+    width: 97%;
+  }
+}

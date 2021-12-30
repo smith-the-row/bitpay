@@ -1,0 +1,58 @@
+.letter {
+    margin: 4rem 0 0 0;
+    color: #fff;
+    background-color: #272d43;
+}
+
+.letter__container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.letter__title {
+    text-align: center;
+    margin: 2rem;
+}
+
+.letter__input {
+    margin-bottom: 1rem;
+}
+
+.letter__input input {
+    font-size: 1.1rem;
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.letter__input button {
+    color: #f4f3f4;
+    background-color: #27ae61;
+    padding: 0.47rem 1.8rem;
+    font-size: 1rem;
+    border: none;
+    margin-left: 0;
+    margin-top: 0.4rem;
+}
+
+@media screen and (max-width:780px){
+    .letter__input button {
+        margin-top: 0.5rem;
+        margin-left: 0;
+    }
+
+    .letter__container{
+        
+        padding: 0.4rem;
+    }
+
+    .letter__title h1 {
+            font-size: 1.4rem;
+    }
+}

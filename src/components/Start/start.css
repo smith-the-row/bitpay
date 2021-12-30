@@ -1,0 +1,41 @@
+.start {
+  color: #f4f4f4;
+  margin: 4rem auto;
+}
+
+.start__grid {
+  width: 80%;
+  margin: auto;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.start__text {
+  flex: 1;
+}
+
+.start__cta {
+  color: #f4f4ff;
+  background-color: #27ae61;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.3rem;
+  transition: all 200ms ease-in;
+}
+
+.start__cta:hover {
+  background-color: #f4f4ff;
+  color: #27ae61;
+}
+
+@media screen and (max-width: 780px) {
+  .start__grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .start__text {
+    margin: 1.4rem auto;
+  }
+}

@@ -1,0 +1,41 @@
+.work{
+    margin: 4rem auto;
+}
+
+
+.work__container {
+    width:80%;
+    margin: auto;
+}
+
+.work__title {
+    text-align: center;
+    margin:2.5rem 0;
+}
+.work__title p {
+    color: #777;
+}
+
+.work__grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.work__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:780px){
+    .work__grid {
+        flex-direction: column;
+    }    
+    .work__card {
+     margin: 3rem auto;
+    }
+    
+}

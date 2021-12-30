@@ -1,0 +1,32 @@
+.address__container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  justify-items: center;
+}
+
+.address {
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+.address__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.address__card div:nth-child(2) {
+  text-align: center;
+  margin: 0.6rem 0;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 780px) {
+  .address__container {
+    grid-template-columns: 1fr;
+  }
+}
