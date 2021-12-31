@@ -16,46 +16,33 @@ import { store } from "../../firebase";
 // import context
 import { UserContext } from "../../context/UserContext";
 
-function createData(name, calories, fat, carbs) {
-  return { name, calories, fat, carbs };
-}
-
-const rows = [
-  createData("yoghurt", 159, 6.0, 24),
-  createData("Ice cream sandwich", 237, 9.0, 37),
-  createData("Eclair", 262, 16.0, 24),
-  createData("Cupcakes and Marshmellows", 305, 3.7, 67),
-  createData("Gingerbread", 356, 16.0, 49),
-];
-
 const WIthdrawalTable = () => {
   const { user } = useContext(UserContext);
   const [withdrawals, setWithdrawals] = useState([]);
 
-  const fetchWithdraws = async () => {
-    try {
-      const collectionRef = collection(
-        store,
-        "users",
-        `${user.email}`,
-        "withdraws"
-      );
-      const userWithdraws = [];
-      // const data = await getDocs(collectionRef);
-      const unsub = onSnapshot(collectionRef, (docs) => {
-        docs.forEach((d) => {
-          userWithdraws.push(d.data());
-          setWithdrawals(userWithdraws);
-        });
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchWithdraws = async () => {
+      try {
+        const collectionRef = collection(
+          store,
+          "users",
+          `${user.email}`,
+          "withdraws"
+        );
+        const userWithdraws = [];
+        onSnapshot(collectionRef, (docs) => {
+          docs.forEach((d) => {
+            userWithdraws.push(d.data());
+            setWithdrawals(userWithdraws);
+          });
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     fetchWithdraws();
-  }, []);
+  }, [user.email]);
 
   console.log(withdrawals);
 

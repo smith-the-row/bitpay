@@ -4,7 +4,6 @@ import {
   Typography,
   Paper,
   Table,
-  TableBody,
   TableCell,
   TableContainer,
   TableHead,
