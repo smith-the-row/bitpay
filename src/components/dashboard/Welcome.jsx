@@ -16,20 +16,20 @@ const Welcome = () => {
   // set State for Name
   const [name, setName] = useState(null);
 
-  const fetchUserDetails = async () => {
-    try {
-      const docRef = doc(store, "/users", `${user.email}`);
-      const userDetails = await getDoc(docRef);
-
-      setName(userDetails.data());
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const docRef = doc(store, "/users", `${user.email}`);
+        const userDetails = await getDoc(docRef);
+
+        setName(userDetails.data());
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     fetchUserDetails();
-  }, []);
+  }, [user.email]);
 
   return (
     <Box>

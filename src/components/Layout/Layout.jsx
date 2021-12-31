@@ -12,7 +12,6 @@ import {
   Toolbar,
   Typography,
   CssBaseline,
-  Menu,
   Divider,
 } from "@mui/material";
 import { MdMenu, MdPowerOff } from "react-icons/md";
@@ -26,7 +25,6 @@ const drawerWidth = 240;
 const Layout = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [openMenu, setOpenMenu] = React.useState(false);
 
   const navigate = useNavigate();
 

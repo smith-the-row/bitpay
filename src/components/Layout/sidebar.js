@@ -5,7 +5,6 @@ import {
   MdDownload,
   MdCreditScore,
   MdRecycling,
-  MdSupportAgent,
   MdBusinessCenter,
 } from "react-icons/md";
 
