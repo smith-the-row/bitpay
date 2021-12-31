@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React, { useEffect } from "react";
 import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
@@ -7,13 +8,8 @@ import Plan from "../components/Plans/Plan";
 import Reason from "../components/Reason/Reason";
 import Start from "../components/Start/Start";
 import Work from "../components/Work/Work";
-import { useLocation } from "react-router-dom";
 
 const Home = () => {
-  const location = useLocation();
-
-  const path = ["/", "/about", "/contact"];
-
   useEffect(() => {
     var Tawk_API = Tawk_API || {},
       Tawk_LoadStart = new Date();
