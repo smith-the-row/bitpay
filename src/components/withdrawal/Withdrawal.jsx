@@ -84,10 +84,10 @@ const Withdrawal = () => {
     top: "20%",
     left: "50%",
     transform: "translate(-50%, -20%)",
-    width: 600,
+    width: { xs: "70%", md: 600 },
     bgcolor: "background.paper",
     boxShadow: 24,
-    p: 4,
+    p: 2,
   };
 
   return (
