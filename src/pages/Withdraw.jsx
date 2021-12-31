@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
+import Withdrawal from "../components/withdrawal/Withdrawal";
 
 const Withdraw = () => {
   return (
     <Layout>
-      <h4>this is the withdrawal section</h4>
+      <Withdrawal />
     </Layout>
   );
 };

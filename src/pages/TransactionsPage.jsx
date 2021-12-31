@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
+import TransactionTabs from "../components/transactions/TransactionsTabs";
 
 const TransactionsPage = () => {
   return (
     <Layout>
-      <h4>this is the transactions page</h4>
+      <TransactionTabs />
     </Layout>
   );
 };

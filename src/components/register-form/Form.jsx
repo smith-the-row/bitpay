@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
@@ -11,6 +11,9 @@ import { useNavigate } from "react-router-dom";
 import "./form.css";
 
 const Form = () => {
+  // control the input fields
+  const [disable, setDisable] = useState(false);
+  const [country, setCountry] = useState([]);
   // toast configuration
   toast.configure();
   // navigation router hook
@@ -20,7 +23,33 @@ const Form = () => {
   const emailRef = useRef();
   const phoneRef = useRef();
   const passwordRef = useRef();
-  const catchRef = useRef();
+  const countryRef = useRef();
+
+  // fetch countries
+
+  const fetchCountry = async () => {
+    try {
+      const apiCall = await fetch(
+        "https://countriesnow.space/api/v0.1/countries"
+      );
+      const response = await apiCall.json();
+      const countriesAndCities = response.data;
+
+      const countries = countriesAndCities.map((country) => {
+        return {
+          main: country.country,
+        };
+      });
+      setCountry(countries);
+    } catch (error) {
+      console.log(error);
+      setDisable(true);
+    }
+  };
+
+  useEffect(() => {
+    fetchCountry();
+  }, []);
 
   // function to create and save user to the database
   const saveUser = async (e) => {
@@ -31,7 +60,7 @@ const Form = () => {
       !emailRef.current.value |
       !phoneRef.current.value |
       !passwordRef.current.value |
-      !catchRef.current.value
+      !countryRef.current.value
     ) {
       toast("Please fill the form correctly", {
         type: "error",
@@ -55,12 +84,14 @@ const Form = () => {
         name: nameRef.current.value,
         phone: phoneRef.current.value,
         password: passwordRef.current.value,
-        catchPhrase: catchRef.current.value,
+        country: countryRef.current.value,
         balance: 0,
         profit: 0,
         bonus: 0,
         deposited: 0,
-        plan: "none",
+        refBonus: 0,
+        totalPackages: "none",
+        activePages: "none",
         verified: user.emailVerified,
         createdAt: user.metadata.creationTime,
         uid: user.uid,
@@ -71,7 +102,7 @@ const Form = () => {
         theme: "colored",
       });
       // redirect user to login
-      naviagte("/login", { name: nameRef.current.value });
+      naviagte("/login");
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         toast("Email is already in use", {
@@ -150,17 +181,27 @@ const Form = () => {
             </div>
             <div className="my-3">
               <label htmlFor="phrase" className="form-label">
-                catch phrase/Password Hint
+                Choose Country
               </label>
-              <input type="text" ref={catchRef} className="form-control" />
+              <select
+                ref={countryRef}
+                className="form-control"
+                disabled={disable}
+              >
+                {country.map((state, index) => (
+                  <option key={index} value={state.main}>
+                    {state.main}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className="mt-1 text-center">
               <p className="text-muted">
                 By Clicking Register you therefore agree to the{" "}
                 <Link to="/terms" className="t-m">
                   Terms & Conditions
-                </Link>{" "}
-                of InvestCo
+                </Link>
+                {""}of CoinSignalPro
               </p>
             </div>
             <button

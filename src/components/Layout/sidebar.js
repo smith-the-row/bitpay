@@ -45,9 +45,4 @@ export const links = [
     path: "/refer",
     icon: <MdRecycling />,
   },
-  {
-    text: "Support",
-    path: "/support",
-    icon: <MdSupportAgent />,
-  },
 ];

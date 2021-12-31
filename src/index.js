@@ -32,6 +32,8 @@ import Invest from "./pages/Invest";
 import Wallets from "./pages/Wallets";
 import TransactionsPage from "./pages/TransactionsPage";
 import WithdrawWallets from "./pages/WithdrawWallets";
+import Refer from "./pages/Refer";
+import Support from "./pages/Support";
 
 // import the user context that will Cover the applications and control authentication state
 import UserProvider from "./context/UserContext";
@@ -50,10 +52,12 @@ ReactDOM.render(
           <Route path="/deposit" element={<Deposit />} />
           <Route path="/deposit/wallet" element={<Wallets />} />
           <Route path="/withdraw" element={<Withdraw />} />
-          <Route path="/withdraw/wallet" element={<WithdrawWallets />} />
+          <Route path="/withdraw/wallets" element={<WithdrawWallets />} />
           <Route path="/account" element={<Account />} />
           <Route path="/invest" element={<Invest />} />
           <Route path="/transactions" element={<TransactionsPage />} />
+          <Route path="/refer" element={<Refer />} />
+          <Route path="/support" element={<Support />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -12,21 +12,32 @@ import {
   Toolbar,
   Typography,
   CssBaseline,
+  Menu,
+  Divider,
 } from "@mui/material";
-import { MdMenu } from "react-icons/md";
+import { MdMenu, MdPowerOff } from "react-icons/md";
 import { links } from "./sidebar";
 import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
 
 const drawerWidth = 240;
 
 const Layout = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [openMenu, setOpenMenu] = React.useState(false);
 
   const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("investCo");
+    signOut(auth);
+    navigate("/");
   };
 
   const drawer = (
@@ -44,6 +55,7 @@ const Layout = (props) => {
           </ListItem>
         ))}
       </List>
+      <Divider />
     </div>
   );
 
@@ -98,6 +110,17 @@ const Layout = (props) => {
           }}
         >
           {drawer}
+          <Toolbar />
+          <Box>
+            <List>
+              <ListItem button onClick={handleLogout}>
+                <ListItemIcon>
+                  <MdPowerOff />
+                </ListItemIcon>
+                <ListItemText primary="Logout" />
+              </ListItem>
+            </List>
+          </Box>
         </Drawer>
         <Drawer
           variant="permanent"
@@ -111,6 +134,17 @@ const Layout = (props) => {
           open
         >
           {drawer}
+          <Toolbar />
+          <Box>
+            <List>
+              <ListItem button onClick={handleLogout}>
+                <ListItemIcon>
+                  <MdPowerOff />
+                </ListItemIcon>
+                <ListItemText primary="Logout" />
+              </ListItem>
+            </List>
+          </Box>
         </Drawer>
       </Box>
       <Box

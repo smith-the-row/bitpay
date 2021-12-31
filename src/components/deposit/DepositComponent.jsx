@@ -43,15 +43,16 @@ const DepositComponent = () => {
   // function to push to a new page
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(priceRef.current.value);
     if (!priceRef.current.value) {
-      return toast.error("Enter a Price to Deposit", {
+      toast.error("Enter a Price to Deposit", {
         theme: "colored",
         position: "bottom-center",
       });
+    } else {
+      // push the user to the new page
+      return navigate("/deposit/wallet", { state: priceRef.current.value });
     }
-
-    // push the user to the new page
-    navigate("/deposit/wallet", { state: priceRef.current.value });
   };
 
   return (
@@ -94,7 +95,7 @@ const DepositComponent = () => {
                 label="Enter Amount"
                 sx={{ mt: 5, mb: 2 }}
                 type="number"
-                ref={priceRef()}
+                inputRef={priceRef}
               />
               <Button
                 variant="contained"

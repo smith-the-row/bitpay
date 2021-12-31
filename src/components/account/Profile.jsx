@@ -1,5 +1,5 @@
 // import the useState from the react component to control the state of the modal in the application
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext, useEffect } from "react";
 // import the needed components from material ui
 import {
   Avatar,
@@ -13,16 +13,27 @@ import {
   TextField,
   IconButton,
   Divider,
+  Skeleton,
 } from "@mui/material";
 
+import { useNavigate } from "react-router-dom";
+
 // import the Fonts from react icons (material icons)
-import { MdAccountCircle, MdUpload, MdAddCircle } from "react-icons/md";
+import { MdUpload, MdAddCircle } from "react-icons/md";
 
 // import Font awesome Icons
 import { FaUser, FaEnvelope, FaPhone, FaCalendar } from "react-icons/fa";
 
 // import the toast components to display errors
 import { toast } from "react-toastify";
+
+// import firebase functions
+import { getDownloadURL, uploadBytes, ref } from "firebase/storage";
+import { doc, updateDoc, getDoc } from "firebase/firestore";
+import { store, bucket } from "../../firebase";
+
+// user context
+import { UserContext } from "../../context/UserContext";
 
 // styles for the Upload Picture Modal
 const style = {
@@ -56,6 +67,14 @@ const Profile = () => {
   const [modalOpen, setModalOpen] = useState(false);
   // state to control the form modal
   const [formModalOpen, setFormModalOpen] = useState(false);
+  // details
+  const [details, setDetails] = useState(null);
+
+  // user context
+  const { user } = useContext(UserContext);
+
+  // navigate hook
+  const navigate = useNavigate();
 
   // set the form refs
   const pictureRef = useRef();
@@ -72,6 +91,92 @@ const Profile = () => {
   const handleFormOpen = () => setFormModalOpen(true);
   const handleFormClose = () => setFormModalOpen(false);
 
+  // function to upload Profile Picture
+  const uploadPicture = async () => {
+    try {
+      const file = pictureRef.current.files[0];
+
+      if (!file) {
+        toast.error("Please Select an Image", {
+          theme: "colored",
+          position: "bottom-center",
+        });
+      }
+      const imgRef = ref(bucket, `profileImg/${file.name}`);
+      await uploadBytes(imgRef, file);
+      const imgSrc = await getDownloadURL(imgRef);
+      // user docRef
+      const userRef = doc(store, "/users", `${user.email}`);
+      await updateDoc(userRef, {
+        profileImg: imgSrc,
+      });
+
+      toast.success("Image Uploaded", {
+        theme: "colored",
+        position: "top-center",
+      });
+      navigate("/dashboard");
+    } catch (error) {
+      toast.error("Could Not Upload Image", {
+        theme: "colored",
+        position: "bottom-center",
+      });
+    }
+  };
+
+  // function to get User
+  const fetchUserDetails = async () => {
+    try {
+      const docRef = doc(store, "/users", `${user.email}`);
+      const userDetails = await getDoc(docRef);
+
+      setDetails(userDetails.data());
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  // useEffect
+  useEffect(() => {
+    fetchUserDetails();
+  }, []);
+
+  // update User Details
+  const updateDetails = async () => {
+    try {
+      const docRef = doc(store, "/users", `${user.email}`);
+
+      if (
+        !emailRef.current.value |
+        !nameRef.current.value |
+        !phoneRef.current.value
+      ) {
+        return toast("Please fill the form correctly", {
+          type: "error",
+          position: "bottom-center",
+          theme: "colored",
+        });
+      }
+
+      await updateDoc(docRef, {
+        email: emailRef.current.value,
+        name: nameRef.current.value,
+        phone: phoneRef.current.value,
+      });
+
+      toast.info("Details Have Been Changed", {
+        theme: "colored",
+        position: "top-center",
+      });
+
+      navigate("/dashboard");
+    } catch (error) {
+      toast.error("Can not Change Details Now", {
+        theme: "colored",
+        position: "bottom-center",
+      });
+    }
+  };
+
   return (
     <div>
       <Box sx={{ mb: 4 }}>
@@ -79,94 +184,113 @@ const Profile = () => {
           Account Profile Information
         </Typography>
       </Box>
+      {details ? (
+        <Paper>
+          <Box
+            sx={{
+              p: 2,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Box sx={{ mb: 2 }}>
+              {details ? (
+                <Avatar src={details.profileImg} />
+              ) : (
+                <Skeleton variant="circular" width="100%" height={80} />
+              )}
+            </Box>
+            <Box sx={{ mt: 2 }}>
+              {details ? (
+                <Typography variant="subtitle1">{details.name}</Typography>
+              ) : (
+                <Skeleton variant="text" />
+              )}
+            </Box>
+            <Box sx={{ mt: 4 }}>
+              <Button
+                endIcon={<MdUpload />}
+                variant="contained"
+                color="primary"
+                onClick={handleOpen}
+              >
+                Upload Picture
+              </Button>
+            </Box>
+          </Box>
+        </Paper>
+      ) : (
+        <Skeleton variant="rectangular" width="100%" height={130} />
+      )}
 
-      <Paper>
-        <Box
-          sx={{
-            p: 2,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Box sx={{ mb: 2 }}>
-            <Avatar sx={{ width: 59, height: 59 }}>
-              <MdAccountCircle size="100px" />
-            </Avatar>
-          </Box>
-          <Box sx={{ mt: 2 }}>
-            <Typography variant="subtitle1">Meeka Dante</Typography>
-          </Box>
-          <Box sx={{ mt: 4 }}>
-            <Button
-              endIcon={<MdUpload />}
-              variant="outlined"
-              onClick={handleOpen}
-            >
-              Upload Picture
-            </Button>
-          </Box>
-        </Box>
-      </Paper>
-
-      <Paper sx={{ mt: 6 }}>
-        <Box
-          sx={{
-            p: 2,
-            display: "flex",
-            justifyContent: "space-between",
-            flexDirection: { md: "row", xs: "column" },
-          }}
-        >
-          <Box sx={{ mb: { xs: 2 } }}>
-            <Box sx={{ display: "flex" }}>
-              <FaUser />
-              <Typography variant="subtitle2" sx={{ ml: 1 }}>
-                Name
-              </Typography>
+      {details ? (
+        <Paper sx={{ mt: 6 }}>
+          <Box
+            sx={{
+              p: 2,
+              display: "flex",
+              justifyContent: "space-between",
+              flexDirection: { md: "row", xs: "column" },
+            }}
+          >
+            <Box sx={{ mb: { xs: 2 } }}>
+              <Box sx={{ display: "flex" }}>
+                <FaUser />
+                <Typography variant="subtitle2" sx={{ ml: 1 }}>
+                  Name
+                </Typography>
+              </Box>
+              <Box sx={{ mt: 2 }}>
+                <Typography>{details.name}</Typography>
+              </Box>
             </Box>
-            <Box sx={{ mt: 2 }}>
-              <Typography>Ikoro Godstime</Typography>
+            <Box sx={{ mb: { xs: 2 } }}>
+              <Box sx={{ display: "flex" }}>
+                <FaEnvelope />
+                <Typography variant="subtitle2" sx={{ ml: 1 }}>
+                  Email
+                </Typography>
+              </Box>
+              <Box sx={{ mt: 2 }}>
+                <Typography>{details.email}</Typography>
+              </Box>
             </Box>
-          </Box>
-          <Box sx={{ mb: { xs: 2 } }}>
-            <Box sx={{ display: "flex" }}>
-              <FaEnvelope />
-              <Typography variant="subtitle2" sx={{ ml: 1 }}>
-                Email
-              </Typography>
+            <Box sx={{ mb: { xs: 2 } }}>
+              <Box sx={{ display: "flex" }}>
+                <FaPhone />
+                <Typography variant="subtitle2" sx={{ ml: 1 }}>
+                  Phone Number
+                </Typography>
+              </Box>
+              <Box sx={{ mt: 2 }}>
+                <Typography>{details.phone}</Typography>
+              </Box>
             </Box>
-            <Box sx={{ mt: 2 }}>
-              <Typography>godstimeIkoro@gmail.com</Typography>
+            <Box sx={{ mb: { xs: 2 } }}>
+              <Box sx={{ display: "flex" }}>
+                <FaCalendar />
+                <Typography variant="subtitle2" sx={{ ml: 1 }}>
+                  Joined
+                </Typography>
+              </Box>
+              <Box sx={{ mt: 2 }}>
+                <Typography>{new Date().toLocaleDateString()}</Typography>
+              </Box>
             </Box>
           </Box>
-          <Box sx={{ mb: { xs: 2 } }}>
-            <Box sx={{ display: "flex" }}>
-              <FaPhone />
-              <Typography variant="subtitle2" sx={{ ml: 1 }}>
-                Phone Number
-              </Typography>
-            </Box>
-            <Box sx={{ mt: 2 }}>
-              <Typography>08109917395</Typography>
-            </Box>
-          </Box>
-          <Box sx={{ mb: { xs: 2 } }}>
-            <Box sx={{ display: "flex" }}>
-              <FaCalendar />
-              <Typography variant="subtitle2" sx={{ ml: 1 }}>
-                Joined
-              </Typography>
-            </Box>
-            <Box sx={{ mt: 2 }}>
-              <Typography>{new Date().toLocaleDateString()}</Typography>
-            </Box>
-          </Box>
-        </Box>
-        <Button sx={{ m: 2 }} onClick={handleFormOpen}>
-          Update Details
-        </Button>
-      </Paper>
+          <Button
+            sx={{ m: 2 }}
+            variant="contained"
+            color="primary"
+            onClick={handleFormOpen}
+          >
+            Update Details
+          </Button>
+        </Paper>
+      ) : (
+        <Skeleton variant="rectangular" width="100%" height={400} />
+      )}
 
       <Modal
         aria-labelledby="transition-modal-title"
@@ -189,8 +313,12 @@ const Profile = () => {
             >
               Update Profile Picture
             </Typography>
-            <TextField type="file" ref={pictureRef} sx={{ mt: 2, mb: 3 }} />
-            <IconButton>
+            <TextField
+              type="file"
+              inputRef={pictureRef}
+              sx={{ mt: 2, mb: 3 }}
+            />
+            <IconButton onClick={uploadPicture}>
               <MdAddCircle />
             </IconButton>
           </Box>
@@ -216,10 +344,14 @@ const Profile = () => {
               </Typography>
             </Box>
             <Divider />
-            <TextField label="Name" ref={nameRef} sx={{ mt: 4 }} />
-            <TextField label="Email" ref={emailRef} sx={{ mt: 4 }} />
-            <TextField label="Phone" ref={phoneRef} sx={{ mt: 4, mb: 3 }} />
-            <Button variant="contained" color="primary">
+            <TextField label="Name" inputRef={nameRef} sx={{ mt: 4 }} />
+            <TextField label="Email" inputRef={emailRef} sx={{ mt: 4 }} />
+            <TextField
+              label="Phone"
+              inputRef={phoneRef}
+              sx={{ mt: 4, mb: 3 }}
+            />
+            <Button variant="contained" color="primary" onClick={updateDetails}>
               update
             </Button>
           </Box>
