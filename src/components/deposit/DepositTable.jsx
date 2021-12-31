@@ -11,7 +11,7 @@ import moment from "moment";
 import { toast } from "react-toastify";
 
 // import firebase function
-import { getDocs, collection, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 import { store } from "../../firebase";
 
 // import context
@@ -25,35 +25,35 @@ const DepositTable = () => {
   // get the user from the user context
   const { user } = useContext(UserContext);
 
-  const fetchDeposit = async () => {
-    try {
-      const collectionRef = collection(
-        store,
-        "users",
-        `${user.email}`,
-        "Deposits"
-      );
-
-      const userDetails = [];
-
-      // const data = await getDocs(collectionRef);
-      const unsub = onSnapshot(collectionRef, (doc) => {
-        doc.forEach((d) => {
-          userDetails.push(d.data());
-          setDeposits(userDetails);
-        });
-      });
-    } catch (error) {
-      toast.error("Please Refresh Browser", {
-        theme: "colored",
-        position: "bottom-center",
-      });
-    }
-  };
-
   useEffect(() => {
+    const fetchDeposit = async () => {
+      try {
+        const collectionRef = collection(
+          store,
+          "users",
+          `${user.email}`,
+          "Deposits"
+        );
+
+        const userDetails = [];
+
+        // const data = await getDocs(collectionRef);
+        onSnapshot(collectionRef, (doc) => {
+          doc.forEach((d) => {
+            userDetails.push(d.data());
+            setDeposits(userDetails);
+          });
+        });
+      } catch (error) {
+        toast.error("Please Refresh Browser", {
+          theme: "colored",
+          position: "bottom-center",
+        });
+      }
+    };
+
     fetchDeposit();
-  }, []);
+  }, [user.email]);
 
   return (
     <TableContainer component={Paper} sx={{ mt: 6 }}>

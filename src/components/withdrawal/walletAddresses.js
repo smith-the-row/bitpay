@@ -1,7 +1,6 @@
 import BtcLogo from "../../img/btc.png";
 import ethLogo from "../../img/eth.png";
 import ltcLogo from "../../img/ltc.png";
-import { FaPiggyBank } from "react-icons/fa";
 
 export const wallets = [
   {

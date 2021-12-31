@@ -22,20 +22,19 @@ const Prices = () => {
   // set State for Name
   const [details, setDetails] = useState(null);
 
-  const fetchUserDetails = async () => {
-    try {
-      const docRef = doc(store, "/users", `${user.email}`);
-      const userDetails = await getDoc(docRef);
-
-      setDetails(userDetails.data());
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const docRef = doc(store, "/users", `${user.email}`);
+        const userDetails = await getDoc(docRef);
+
+        setDetails(userDetails.data());
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchUserDetails();
-  }, []);
+  }, [user.email]);
 
   return (
     <Box sx={{ mt: 2, mb: 4 }}>

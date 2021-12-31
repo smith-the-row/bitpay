@@ -125,20 +125,22 @@ const Profile = () => {
   };
 
   // function to get User
-  const fetchUserDetails = async () => {
-    try {
-      const docRef = doc(store, "/users", `${user.email}`);
-      const userDetails = await getDoc(docRef);
 
-      setDetails(userDetails.data());
-    } catch (error) {
-      console.log(error);
-    }
-  };
   // useEffect
   useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const docRef = doc(store, "/users", `${user.email}`);
+        const userDetails = await getDoc(docRef);
+
+        setDetails(userDetails.data());
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     fetchUserDetails();
-  }, []);
+  }, [details, user.email]);
 
   // update User Details
   const updateDetails = async () => {
