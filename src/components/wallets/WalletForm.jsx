@@ -79,10 +79,10 @@ const WalletForm = () => {
       navigate("/dashboard");
     } catch (error) {
       console.log(error);
-      // toast.error("Payment Not Sent", {
-      //   theme: "colored",
-      //   position: "bottom-center",
-      // });
+      toast.error("Payment Not Sent", {
+        theme: "colored",
+        position: "bottom-center",
+      });
     }
   };
 

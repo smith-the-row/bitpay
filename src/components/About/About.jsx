@@ -10,7 +10,9 @@ const About = () => {
         <div className="py-5">
           <div className="container d-flex flex-column">
             <div className="text-center">
-              <h1>Create your cryptocurrency portfolio today</h1>
+              <h1 className="fw-bolder">
+                Create your cryptocurrency portfolio today
+              </h1>
               <p className="text-muted">
                 CoinSignalPro has a variety of features that make it the best
                 place to start trading

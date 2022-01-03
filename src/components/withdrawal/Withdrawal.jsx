@@ -84,10 +84,10 @@ const Withdrawal = () => {
     top: "20%",
     left: "50%",
     transform: "translate(-50%, -20%)",
-    width: { xs: "70%", md: 600 },
+    width: { xs: "90%", md: 600 },
     bgcolor: "background.paper",
     boxShadow: 24,
-    p: 2,
+    p: { xs: 2, md: 3 },
   };
 
   return (
@@ -114,8 +114,8 @@ const Withdrawal = () => {
                       mt: 2,
                     }}
                   >
-                    <Typography>Amount</Typography>
-                    <Typography>{option.amount}</Typography>
+                    <Typography variant="body1">Amount</Typography>
+                    <Typography variant="subtitle1">{option.amount}</Typography>
                   </Box>
                   <Box
                     sx={{
@@ -125,8 +125,8 @@ const Withdrawal = () => {
                       mt: 2,
                     }}
                   >
-                    <Typography>Charge</Typography>
-                    <Typography>{option.charge}</Typography>
+                    <Typography variant="body1">Charge</Typography>
+                    <Typography variant="subtitle1">{option.charge}</Typography>
                   </Box>
                   <Box
                     sx={{
@@ -136,7 +136,7 @@ const Withdrawal = () => {
                       mt: 2,
                     }}
                   >
-                    <Typography>Duration</Typography>
+                    <Typography variant="body1">Duration</Typography>
                     <Typography variant="subtitle1">
                       {option.duration}
                     </Typography>

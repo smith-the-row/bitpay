@@ -41,8 +41,8 @@ const WalletAddress = () => {
       <Box sx={{ mt: 5 }}>
         <Grid container spacing={2}>
           {wallets.map((wallet) => (
-            <Grid item xs={12} md={4} key={wallet.coin}>
-              <Box>
+            <Grid item xs={12} sm={6} md={4} key={wallet.coin}>
+              <Box sx={{ width: { xs: "60%", md: "100%" } }}>
                 <Card>
                   <CardHeader
                     title={wallet.coin}
@@ -58,7 +58,7 @@ const WalletAddress = () => {
                   />
                   <CardContent>
                     <Box>
-                      <Typography paragraph noWrap={true}>
+                      <Typography paragraph noWrap={true} variant="subtitle1">
                         {wallet.address}
                       </Typography>
                     </Box>

@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import Skeleton from "@mui/material/Skeleton";
+import Typography from "@mui/material/Typography";
 import moment from "moment";
 
 // import firebase function
@@ -33,7 +33,7 @@ const WIthdrawalTable = () => {
         onSnapshot(collectionRef, (docs) => {
           docs.forEach((d) => {
             userWithdraws.push(d.data());
-            setWithdrawals(userWithdraws);
+            setWithdrawals((prevState) => [...withdrawals, ...userWithdraws]);
           });
         });
       } catch (error) {
@@ -42,9 +42,7 @@ const WIthdrawalTable = () => {
     };
 
     fetchWithdraws();
-  }, [user.email]);
-
-  console.log(withdrawals);
+  }, [withdrawals, user]);
 
   return (
     <TableContainer component={Paper} sx={{ mt: 6 }}>
@@ -79,7 +77,9 @@ const WIthdrawalTable = () => {
           </TableBody>
         </Table>
       ) : (
-        <Skeleton variant="rectangular" width="100%" />
+        <Typography variant="body1" component="div" sx={{ p: 2 }}>
+          Currently No Withdrawals
+        </Typography>
       )}
     </TableContainer>
   );

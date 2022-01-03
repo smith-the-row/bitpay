@@ -16,7 +16,7 @@ const Questions = () => {
           <Accordion.Header className="bg-success">
             What is Cryptocurrency?
           </Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body className="text-sec">
             Cryptocurrency is decentralized digital money, based on blockchain
             technology. You may be familiar with the most popular versions,
             Bitcoin and Ethereum, but there are more than 5,000 different
@@ -25,7 +25,7 @@ const Questions = () => {
         </Accordion.Item>
         <Accordion.Item eventKey="1">
           <Accordion.Header>What is crypto currency mining?</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body className="text-sec">
             In a nutshell, cryptocurrency mining is a term that refers to the
             process of gathering cryptocurrency as a reward for work that you
             complete.
@@ -33,7 +33,7 @@ const Questions = () => {
         </Accordion.Item>
         <Accordion.Item eventKey="2">
           <Accordion.Header>Why do people crypto mine?</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body className="text-sec">
             For some, they’re looking for another source of income. For others,
             it’s about gaining greater financial freedom without governments or
             banks butting in. But whatever the reason, cryptocurrencies are a
@@ -45,22 +45,22 @@ const Questions = () => {
           <Accordion.Header>
             How can i withdraw my earning balance?
           </Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body className="text-sec">
             Miners can withdraw their mining coins. We processed withdrawals
             manually so it will take more time.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="4">
           <Accordion.Header>
-            How does Finetminers Insurance work and how does it protect miners
+            How does CoinSignalPro Insurance work and how does it protect miners
             assets and machines?
           </Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body className="text-sec">
             The insurance has a lite token fee and covers everything including
             fees, it gives you 20% of any fee or deposit. The insurance earns
-            you tokens that are paid weekly and the application is flexible to
-            enable every miner have full access to this funds and take care of
-            his/her Finet maintenance.
+            you tokens that are paid and the application is flexible to enable
+            every miner have full access to this funds and take care of his/her
+            Coinsignal maintenance.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

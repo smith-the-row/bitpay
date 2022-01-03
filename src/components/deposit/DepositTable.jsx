@@ -5,8 +5,8 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
-import Skeleton from "@mui/material/Skeleton";
 import moment from "moment";
 import { toast } from "react-toastify";
 
@@ -57,16 +57,16 @@ const DepositTable = () => {
 
   return (
     <TableContainer component={Paper} sx={{ mt: 6 }}>
-      <Table sx={{ minWidth: 400 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Amount</TableCell>
-            <TableCell>Payment Mode</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell>Date</TableCell>
-          </TableRow>
-        </TableHead>
-        {deposits.length > 0 ? (
+      {deposits.length > 0 ? (
+        <Table sx={{ minWidth: 400 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Amount</TableCell>
+              <TableCell>Payment Mode</TableCell>
+              <TableCell>Status</TableCell>
+              <TableCell>Date</TableCell>
+            </TableRow>
+          </TableHead>
           <TableBody>
             {deposits.map((deposit) => (
               <TableRow
@@ -86,10 +86,12 @@ const DepositTable = () => {
               </TableRow>
             ))}
           </TableBody>
-        ) : (
-          <Skeleton variant="rectangular" width="100%" height={500} />
-        )}
-      </Table>
+        </Table>
+      ) : (
+        <Typography variant="body1" sx={{ p: 2 }} component="div">
+          Currently no Deposit
+        </Typography>
+      )}
     </TableContainer>
   );
 };

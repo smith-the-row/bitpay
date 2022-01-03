@@ -10,11 +10,7 @@ const Panel = (props) => {
   const { children, value, index } = props;
   return (
     <div hidden={value !== index}>
-      {value === index && (
-        <Box sx={{ mt: 4 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ mt: 4 }}>{children}</Box>}
     </div>
   );
 };
@@ -42,7 +38,7 @@ const TransactionTabs = () => {
       </Panel>
       <Box sx={{ mt: 10 }}>
         <Typography variant="caption">
-          All Rights Reserved © CoinSignalPro 2021
+          All Rights Reserved © CoinSignalPro 2022
         </Typography>
       </Box>
     </Box>

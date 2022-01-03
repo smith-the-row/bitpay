@@ -47,7 +47,7 @@ const Prices = () => {
                   <FaDownload size="31px" color="#ffad46" />
                 </Box>
                 <Box sx={{ ml: 2 }}>
-                  <Typography variant="subtitle2">Deposited</Typography>
+                  <Typography variant="body1">Deposited</Typography>
                   <Typography variant="subtitle1">{`$${details.deposited.toFixed(
                     2
                   )}`}</Typography>
@@ -66,8 +66,8 @@ const Prices = () => {
                   <FaDatabase size="31px" color="#31ce36" />
                 </Box>
                 <Box sx={{ ml: 2 }}>
-                  <Typography variant="caption">Profit</Typography>
-                  <Typography variant="body1">{`$${details.profit.toFixed(
+                  <Typography variant="body1">Profit</Typography>
+                  <Typography variant="subtitle1">{`$${details.profit.toFixed(
                     2
                   )}`}</Typography>
                 </Box>
@@ -85,8 +85,8 @@ const Prices = () => {
                   <FaGift size="31px" color="#f25961" />
                 </Box>
                 <Box sx={{ ml: 2 }}>
-                  <Typography variant="caption">Bonus</Typography>
-                  <Typography variant="body1">{`$${details.bonus.toFixed(
+                  <Typography variant="body1">Bonus</Typography>
+                  <Typography variant="subtitle1">{`$${details.bonus.toFixed(
                     2
                   )}`}</Typography>
                 </Box>
@@ -104,8 +104,8 @@ const Prices = () => {
                   <FaUsers size="31px" color="#1572e8" />
                 </Box>
                 <Box sx={{ ml: 2 }}>
-                  <Typography variant="caption">Ref. Bonus</Typography>
-                  <Typography variant="body1">{`$${details.refBonus.toFixed(
+                  <Typography variant="body1">Ref. Bonus</Typography>
+                  <Typography variant="subtitle1">{`$${details.refBonus.toFixed(
                     2
                   )}`}</Typography>
                 </Box>
@@ -123,8 +123,8 @@ const Prices = () => {
                   <FaCreditCard size="31px" color="#6861ce" />
                 </Box>
                 <Box sx={{ ml: 2 }}>
-                  <Typography variant="caption">Balance</Typography>
-                  <Typography variant="body1">{`$${details.balance.toFixed(
+                  <Typography variant="body1">Balance</Typography>
+                  <Typography variant="subtitle1">{`$${details.balance.toFixed(
                     2
                   )}`}</Typography>
                 </Box>
@@ -142,8 +142,8 @@ const Prices = () => {
                   <FaEnvelope size="31px" color="#f25961" />
                 </Box>
                 <Box sx={{ ml: 2 }}>
-                  <Typography variant="caption">Total Package</Typography>
-                  <Typography variant="body1">
+                  <Typography variant="body1">Total Package</Typography>
+                  <Typography variant="subtitle1">
                     {details.totalPackages}
                   </Typography>
                 </Box>
@@ -161,8 +161,10 @@ const Prices = () => {
                   <FaEnvelopeOpen size="31px" color="#1572e8" />
                 </Box>
                 <Box sx={{ ml: 2 }}>
-                  <Typography variant="caption">Active Packages</Typography>
-                  <Typography variant="body1">{details.activePages}</Typography>
+                  <Typography variant="body1">Active Packages</Typography>
+                  <Typography variant="subtitle1">
+                    {details.activePages}
+                  </Typography>
                 </Box>
               </Box>
             </Paper>

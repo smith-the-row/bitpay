@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import moment from "moment";
 import "./footer.css";
 
 const Footer = () => {
@@ -13,29 +14,31 @@ const Footer = () => {
             <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column">
               <h3>About Us</h3>
               <p>
-                InvestCo is one of the leading cryptocurrency mining platforms,
-                offering cryptocurrency mining capacity in every range for
-                absoulte beginners,With cryptocurrency replacing fiat currencies
-                our goal is to make aquiring cryptocurrency easy for everyone
+                CoinSignalPro is one of the leading cryptocurrency mining
+                platforms, offering cryptocurrency mining capacity in every
+                range for absoulte beginners,With cryptocurrency replacing fiat
+                currencies our goal is to make aquiring cryptocurrency easy for
+                everyone
               </p>
             </div>
             <div className="col-sm-12 col-md-2 col-lg-2 d-flex flex-column mb-3">
               <h3>Quick Links</h3>
-              <Link to="/" className="text-white my-1">
+              <Link to="/" className="text-white my-1 text-sec">
                 Home
               </Link>
-              <Link to="/about" className="text-white my-1">
+              <Link to="/about" className="text-white my-1 text-sec">
                 About
               </Link>
-              <Link to="/contact" className="text-white my-1">
+              <Link to="/contact" className="text-white my-1 text-sec">
                 Contact
               </Link>
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 d-flex flex-column mb-5">
               <h3>Contact Info</h3>
-              <p>info@investco.co</p>
+              <p>info@coinSignalPro.co</p>
               <p>
-                InvestCo Head office US: 2944 N 44th Street,Phoenix,AZ 85018
+                coinSignalPro Head office US: 2944 N 44th Street,Phoenix,AZ
+                85018
               </p>
               <p>
                 UK:First Floor ,Omega Building,Smugglers Way,Wandsworth,SW18
@@ -60,7 +63,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-center mt-3">
-            <p>COPYRIGHT © RESVERED INVESTCO 2021</p>
+            <p>
+              COPYRIGHT © RESVERED coinSignalPro 2014 -{" "}
+              {moment(new Date()).format("YYYY")}
+            </p>
           </div>
         </div>
       </footer>

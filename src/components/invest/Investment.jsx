@@ -80,14 +80,14 @@ const Investment = () => {
                   <Box sx={{ mt: 4, mb: 3 }}>
                     <Typography
                       textAlign="center"
-                      variant="subtitle2"
+                      variant="subtitle1"
                       component="div"
                     >
                       Reward:{plan.reward}
                     </Typography>
                     <Typography
                       textAlign="center"
-                      variant="subtitle2"
+                      variant="subtitle1"
                       component="div"
                     >
                       Duration:{plan.duration}

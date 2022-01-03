@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="hero__overlay">
           <div className="container py-5 d-flex flex-column ">
             <div>
-              <h1 className="text-white text-center text-uppercase fs-1 fw-bolder">
+              <h1 className="text-white text-center text-uppercase fs-1 fw-bold">
                 Financial Investments
               </h1>
             </div>
@@ -33,7 +33,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="text-center mx-auto">
-            <Link to="/register" className="btn btn-success fs-5">
+            <Link to="/register" className="btn btn-success fs-5 text-sec">
               Get Started <FaChevronCircleRight className="ms-2" />
             </Link>
           </div>

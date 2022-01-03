@@ -36,7 +36,7 @@ const Form = () => {
         passwordRef.current.value
       );
       // store the token in session
-      sessionStorage.setItem("investCo", user.user.refreshToken);
+      sessionStorage.setItem("token", user.user.refreshToken);
       // redirect to dashboard
       toast.success("Welcome Back !!", {
         position: "top-center",

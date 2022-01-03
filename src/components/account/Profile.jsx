@@ -34,6 +34,7 @@ import { store, bucket } from "../../firebase";
 
 // user context
 import { UserContext } from "../../context/UserContext";
+import moment from "moment";
 
 // styles for the Upload Picture Modal
 const style = {
@@ -79,7 +80,6 @@ const Profile = () => {
   // set the form refs
   const pictureRef = useRef();
   const nameRef = useRef();
-  const emailRef = useRef();
   const phoneRef = useRef();
 
   // functions to control the visibility of the modals
@@ -147,11 +147,7 @@ const Profile = () => {
     try {
       const docRef = doc(store, "/users", `${user.email}`);
 
-      if (
-        !emailRef.current.value |
-        !nameRef.current.value |
-        !phoneRef.current.value
-      ) {
+      if (!nameRef.current.value | !phoneRef.current.value) {
         return toast("Please fill the form correctly", {
           type: "error",
           position: "bottom-center",
@@ -160,22 +156,23 @@ const Profile = () => {
       }
 
       await updateDoc(docRef, {
-        email: emailRef.current.value,
         name: nameRef.current.value,
         phone: phoneRef.current.value,
       });
 
-      toast.info("Details Have Been Changed", {
+      toast.info("Check Email for Reset Details", {
         theme: "colored",
         position: "top-center",
       });
 
       navigate("/dashboard");
     } catch (error) {
-      toast.error("Can not Change Details Now", {
-        theme: "colored",
-        position: "bottom-center",
-      });
+      console.log(error);
+
+      // toast.error("Can not Change Details Now", {
+      //   theme: "colored",
+      //   position: "bottom-center",
+      // });
     }
   };
 
@@ -239,29 +236,29 @@ const Profile = () => {
             <Box sx={{ mb: { xs: 2 } }}>
               <Box sx={{ display: "flex" }}>
                 <FaUser />
-                <Typography variant="subtitle2" sx={{ ml: 1 }}>
+                <Typography variant="body1" sx={{ ml: 1 }}>
                   Name
                 </Typography>
               </Box>
               <Box sx={{ mt: 2 }}>
-                <Typography>{details.name}</Typography>
+                <Typography variant="subtitle1">{details.name}</Typography>
               </Box>
             </Box>
             <Box sx={{ mb: { xs: 2 } }}>
               <Box sx={{ display: "flex" }}>
                 <FaEnvelope />
-                <Typography variant="subtitle2" sx={{ ml: 1 }}>
+                <Typography variant="body1" sx={{ ml: 1 }}>
                   Email
                 </Typography>
               </Box>
               <Box sx={{ mt: 2 }}>
-                <Typography>{details.email}</Typography>
+                <Typography variant="subtitle1">{details.email}</Typography>
               </Box>
             </Box>
             <Box sx={{ mb: { xs: 2 } }}>
               <Box sx={{ display: "flex" }}>
                 <FaPhone />
-                <Typography variant="subtitle2" sx={{ ml: 1 }}>
+                <Typography variant="body1" sx={{ ml: 1 }}>
                   Phone Number
                 </Typography>
               </Box>
@@ -272,12 +269,14 @@ const Profile = () => {
             <Box sx={{ mb: { xs: 2 } }}>
               <Box sx={{ display: "flex" }}>
                 <FaCalendar />
-                <Typography variant="subtitle2" sx={{ ml: 1 }}>
+                <Typography variant="subtitle1" sx={{ ml: 1 }}>
                   Joined
                 </Typography>
               </Box>
               <Box sx={{ mt: 2 }}>
-                <Typography>{new Date().toLocaleDateString()}</Typography>
+                <Typography>
+                  {moment(details.createdAt).format("Do MM YY")}
+                </Typography>
               </Box>
             </Box>
           </Box>
@@ -347,7 +346,6 @@ const Profile = () => {
             </Box>
             <Divider />
             <TextField label="Name" inputRef={nameRef} sx={{ mt: 4 }} />
-            <TextField label="Email" inputRef={emailRef} sx={{ mt: 4 }} />
             <TextField
               label="Phone"
               inputRef={phoneRef}

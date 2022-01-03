@@ -33,7 +33,7 @@ const Layout = (props) => {
   };
 
   const handleLogout = () => {
-    sessionStorage.removeItem("investCo");
+    sessionStorage.removeItem("token");
     signOut(auth);
     navigate("/");
   };
@@ -108,7 +108,6 @@ const Layout = (props) => {
           }}
         >
           {drawer}
-          <Toolbar />
           <Box>
             <List>
               <ListItem button onClick={handleLogout}>
@@ -132,7 +131,6 @@ const Layout = (props) => {
           open
         >
           {drawer}
-          <Toolbar />
           <Box>
             <List>
               <ListItem button onClick={handleLogout}>
