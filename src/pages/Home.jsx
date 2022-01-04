@@ -1,5 +1,6 @@
 /*eslint-disable */
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
@@ -10,7 +11,15 @@ import Start from "../components/Start/Start";
 import Work from "../components/Work/Work";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
+    const token = sessionStorage.getItem("token");
+
+    if (token) {
+      navigate("/dashboard");
+    }
+
     var Tawk_API = Tawk_API || {},
       Tawk_LoadStart = new Date();
 

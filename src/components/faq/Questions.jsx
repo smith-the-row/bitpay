@@ -5,7 +5,7 @@ const Questions = () => {
   return (
     <div className="container d-flex flex-column">
       <div className="my-3 text-center">
-        <h1>ASK YOUR UNKNOWN QUESTIONS</h1>
+        <h1 className="fw-bolder">Ask your Questions</h1>
         <p className="text-muted p-1">
           Here you can find our top frequently asked questions. Please let us
           know if you have any queries regarding our mining platform and FAQs.

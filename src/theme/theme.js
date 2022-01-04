@@ -28,11 +28,4 @@ export const theme = createTheme({
       textTransform: "lowercase",
     },
   },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        backgroundColor: "#5cb85c",
-      },
-    },
-  },
 });

@@ -29,11 +29,9 @@ const WIthdrawalTable = () => {
           `${user.email}`,
           "withdraws"
         );
-        const userWithdraws = [];
         onSnapshot(collectionRef, (docs) => {
           docs.forEach((d) => {
-            userWithdraws.push(d.data());
-            setWithdrawals((prevState) => [...withdrawals, ...userWithdraws]);
+            setWithdrawals([d.data()]);
           });
         });
       } catch (error) {
@@ -42,7 +40,7 @@ const WIthdrawalTable = () => {
     };
 
     fetchWithdraws();
-  }, [withdrawals, user]);
+  }, [user.email]);
 
   return (
     <TableContainer component={Paper} sx={{ mt: 6 }}>

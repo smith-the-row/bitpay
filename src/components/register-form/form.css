@@ -21,14 +21,6 @@
   background-color: white;
 }
 
-.t-m {
-  color: #27ae61;
-}
-
-.t-m:hover {
-  color: #27ae61;
-}
-
 @media screen and (max-width: 780px) {
   .form__card {
     width: 90%;

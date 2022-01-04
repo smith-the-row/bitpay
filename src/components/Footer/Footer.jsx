@@ -16,9 +16,10 @@ const Footer = () => {
               <p>
                 CoinSignalPro is one of the leading cryptocurrency mining
                 platforms, offering cryptocurrency mining capacity in every
-                range for absoulte beginners,With cryptocurrency replacing fiat
-                currencies our goal is to make aquiring cryptocurrency easy for
-                everyone
+                range for absoulte beginners,
+                <br />
+                With cryptocurrency replacing fiat currencies our goal is to
+                make aquiring cryptocurrency easy for everyone
               </p>
             </div>
             <div className="col-sm-12 col-md-2 col-lg-2 d-flex flex-column mb-3">

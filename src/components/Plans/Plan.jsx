@@ -4,10 +4,10 @@ import "./plan.css";
 
 const Plan = () => {
   return (
-    <div className="plan">
+    <div className="plan" id="plan">
       <div className="plan__container">
         <div className="plan__title">
-          <h1>Choose your Prefered Plan</h1>
+          <h1 className="fw-bolder">Choose your Prefered Plan</h1>
           <p>
             Choose your plans and increase your mining speed and make more
             coins!

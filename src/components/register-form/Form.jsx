@@ -133,7 +133,7 @@ const Form = () => {
       <div className="form__card shadow p-3 rounded mt-2">
         <div className="form__body">
           <div className="form__title text-center my-5">
-            <Link to="/" className="fs-1 fw-bold t-m">
+            <Link to="/" className="fs-1 fw-bolder text-main text-success">
               CoinSignalPro
             </Link>
             <p className="text-muted">
@@ -153,7 +153,7 @@ const Form = () => {
                   <input type="text" ref={nameRef} className="form-control" />
                 </div>
               </div>
-              <div className="col-sm-12 col-md-6 col-lg-6">
+              <div className="col-sm-12 col-md-6 col-lg-6 sm-mt-2">
                 <div>
                   <label htmlFor="Name" className="form-label">
                     Email

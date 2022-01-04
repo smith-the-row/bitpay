@@ -92,7 +92,7 @@ const Form = () => {
     <div className="form pd">
       <div className="form__card shadow rounded my-5 p-3">
         <div className="form__title text-center">
-          <Link to="/" className="fs-1 fw-bold text-success">
+          <Link to="/" className="fs-1 fw-bolder text-main text-success">
             CoinSignalPro
           </Link>
           <p>
@@ -115,8 +115,12 @@ const Form = () => {
             </label>
             <input type="password" ref={passwordRef} className="form-control" />
           </div>
-          <div className="text-left my-1">
-            <Link to="/" className="text-muted" onClick={resetPassword}>
+          <div className="text-left my-3">
+            <Link
+              to="/"
+              className="text-muted text-sec"
+              onClick={resetPassword}
+            >
               Forgot Password
             </Link>
           </div>

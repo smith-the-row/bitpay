@@ -5,11 +5,11 @@ import "./work.css";
 
 const Work = () => {
   return (
-    <IconContext.Provider value={{ color: "#27ae61", size: "3rem" }}>
-      <div className="work">
+    <IconContext.Provider value={{ color: "#27ae61", size: "2rem" }}>
+      <div className="work mt-4">
         <div className="work__container">
           <div className="work__title">
-            <h1>Start Mining Live in Few Minutes</h1>
+            <h1 className="fw-bolder">Start Mining Live in Few Minutes</h1>
             <p>CoinSignalPro supports a wide Range of cryptocurrency</p>
           </div>
           <div className="work__grid">

@@ -29,7 +29,7 @@ const WalletAddress = () => {
   };
 
   return (
-    <div>
+    <Box sx={{ width: { xs: "80%", md: "100%" } }}>
       <Box>
         <Typography variant="h5" component="div" gutterBottom>
           Make Payment
@@ -42,8 +42,8 @@ const WalletAddress = () => {
         <Grid container spacing={2}>
           {wallets.map((wallet) => (
             <Grid item xs={12} sm={6} md={4} key={wallet.coin}>
-              <Box sx={{ width: { xs: "60%", md: "100%" } }}>
-                <Card>
+              <Box>
+                <Card sx={{ width: { xs: "300", md: "360" } }}>
                   <CardHeader
                     title={wallet.coin}
                     subheader={wallet.addressName}
@@ -70,7 +70,7 @@ const WalletAddress = () => {
         </Grid>
       </Box>
       <WalletForm />
-    </div>
+    </Box>
   );
 };
 

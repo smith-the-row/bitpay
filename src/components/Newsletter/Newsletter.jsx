@@ -6,11 +6,13 @@ const Newsletter = () => {
     <div className="letter bg-dark">
       <div className="letter__container">
         <div className="letter__title">
-          <h1>Subscribe to Our Newsletter to get latest News</h1>
+          <h1 className="fs-2 fw-bolder">
+            Subscribe to Our Newsletter to get latest News
+          </h1>
         </div>
         <div className="letter__input">
           <input type="email" placeholder="Your Email Address" />
-          <button>Subscribe</button>
+          <button className="btn btn-success mt-2">Subscribe</button>
         </div>
       </div>
     </div>
