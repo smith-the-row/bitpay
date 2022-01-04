@@ -13,11 +13,10 @@ const Address = () => {
               <FaMapMarker />
             </div>
             <div>
-              <h1>Address</h1>
+              <h1 className="fs-4">Address</h1>
               <p>
                 InvestCo Head office US: 2944 N 44th Street,Phoenix,AZ 85018
-              </p>
-              <p>
+                <br />
                 UK:First Floor ,Omega Building,Smugglers Way,Wandsworth,SW18
               </p>
             </div>
@@ -27,7 +26,7 @@ const Address = () => {
               <FaEnvelope />
             </div>
             <div>
-              <h1>Email</h1>
+              <h1 className="fs-4">Email</h1>
               <p>info@investco.co</p>
             </div>
           </div>
@@ -36,7 +35,7 @@ const Address = () => {
               <FaPhoneAlt />
             </div>
             <div>
-              <h1>Phone</h1>
+              <h1 className="fs-4">Phone</h1>
               <p>Call Us Now +1 (403)-596-8123</p>
             </div>
           </div>
