@@ -32,7 +32,13 @@ const Plan = () => {
         </div>
       </div>
       <Box>
-        <Tabs value={value} onChange={handleChange} centered>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+        >
           <Tab
             label="Basic"
             sx={{ color: "#000", textTransform: "uppercase" }}

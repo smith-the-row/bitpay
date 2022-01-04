@@ -67,7 +67,14 @@ const Investment = () => {
         </Typography>
       </Box>
       <Box>
-        <Tabs value={value} onChange={handleChange} centered>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          centered
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+        >
           <Tab
             label="Basic"
             sx={{ color: "#fff", textTransform: "uppercase" }}
@@ -119,7 +126,7 @@ const Investment = () => {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <div>
-          <div className="row w-75 mx-auto">
+          <div className="row">
             {bronzePlan.map((plan) => (
               <div className="col-sm-12 col-md-3 col-lg-3 " key={plan.id}>
                 <div className="plan__card p-5 shadow">
@@ -173,7 +180,7 @@ const Investment = () => {
       </TabPanel>
       <TabPanel value={value} index={3}>
         <div>
-          <div className="row w-75 mx-auto">
+          <div className="row">
             {goldPlan.map((plan) => (
               <div className="col-sm-12 col-md-4 col-lg-4 mt-3 " key={plan.id}>
                 <div className="plan__card p-5 shadow">
@@ -200,7 +207,7 @@ const Investment = () => {
       </TabPanel>
       <TabPanel value={value} index={4}>
         <div>
-          <div className="row w-75 mx-auto">
+          <div className="row">
             {platinumPlan.map((plan) => (
               <div className="col-sm-12 col-md-4 col-lg-4 mt-3 " key={plan.id}>
                 <div className="plan__card p-5 shadow">
