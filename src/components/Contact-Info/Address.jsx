@@ -15,7 +15,8 @@ const Address = () => {
             <div>
               <h1 className="fs-4">Address</h1>
               <p>
-                InvestCo Head office US: 2944 N 44th Street,Phoenix,AZ 85018
+                coinSignalPro Head office US: 2944 N 44th Street,Phoenix,AZ
+                85018
                 <br />
                 UK:First Floor ,Omega Building,Smugglers Way,Wandsworth,SW18
               </p>
@@ -27,7 +28,7 @@ const Address = () => {
             </div>
             <div>
               <h1 className="fs-4">Email</h1>
-              <p>info@investco.co</p>
+              <p>info@coinSignalPro.co</p>
             </div>
           </div>
           <div className="address__card">

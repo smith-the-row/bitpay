@@ -31,7 +31,7 @@ const WIthdrawalTable = () => {
         );
         onSnapshot(collectionRef, (docs) => {
           docs.forEach((d) => {
-            setWithdrawals([d.data()]);
+            setWithdrawals((prevState) => [...prevState, d.data()]);
           });
         });
       } catch (error) {

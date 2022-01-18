@@ -18,7 +18,7 @@ const Work = () => {
                 <FaUser />
               </div>
               <div className="mt-2">
-                <h4 className="py-2">Create Account</h4>
+                <h4 className="py-2 fs-5">Create Account</h4>
               </div>
             </div>
             <div className="work__card">
@@ -26,7 +26,7 @@ const Work = () => {
                 <FaPiggyBank />
               </div>
               <div className="mt-2">
-                <h4 className="py-2">Fund Account</h4>
+                <h4 className="py-2 fs-5">Fund Account</h4>
               </div>
             </div>
             <div className="work__card">
@@ -34,7 +34,7 @@ const Work = () => {
                 <FaExchangeAlt />
               </div>
               <div className="mt-2">
-                <h4 className="py-2">Start Mining</h4>
+                <h4 className="py-2 fs-5">Start Mining</h4>
               </div>
             </div>
           </div>

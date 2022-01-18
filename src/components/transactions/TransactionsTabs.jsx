@@ -25,7 +25,14 @@ const TransactionTabs = () => {
   return (
     <Box>
       <Box>
-        <Tabs value={index} onChange={onIndexChange}>
+        <Tabs
+          value={index}
+          onChange={onIndexChange}
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+          centered
+        >
           <Tab label="Withdraws" />
           <Tab label="Deposits" />
         </Tabs>

@@ -2,7 +2,7 @@ export const platinumPlan = [
   {
     id: 1,
     invest: "100000",
-    reward: "1080000",
+    reward: "1,080,000",
     duration: "72hrs - 1 month",
   },
   {

@@ -46,7 +46,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="footer__links">
+          {/* <div className="footer__links">
             <div className="footer__media">
               <a href="https://www.facebook.com">
                 <FaFacebookF />
@@ -62,7 +62,7 @@ const Footer = () => {
                 <FaInstagram />
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="text-center mt-3">
             <p>
               COPYRIGHT © RESVERED coinSignalPro 2014 -{" "}

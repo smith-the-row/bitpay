@@ -62,7 +62,7 @@ const About = () => {
                 <div className="text-center">
                   <h4 className="my-2">Technology</h4>
                   <p className="text-muted">
-                    We work on Google servers with the highest reliability &
+                    We work with Google servers with the highest reliability &
                     99.99% uptime
                   </p>
                 </div>

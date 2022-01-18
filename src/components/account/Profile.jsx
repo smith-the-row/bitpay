@@ -160,7 +160,7 @@ const Profile = () => {
         phone: phoneRef.current.value,
       });
 
-      toast.info("Check Email for Reset Details", {
+      toast.info("Details have been updated", {
         theme: "colored",
         position: "top-center",
       });

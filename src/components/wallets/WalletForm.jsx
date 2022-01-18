@@ -88,7 +88,15 @@ const WalletForm = () => {
 
   // component to be Returned
   return (
-    <Box sx={{ mt: 6, display: "flex", flexDirection: "column", width: "50%" }}>
+    <Box
+      sx={{
+        mt: 6,
+        display: "flex",
+        flexDirection: "column",
+        width: { xs: "80%", md: "50%" },
+        overflow: "hidden",
+      }}
+    >
       <Box sx={{ display: "flex", flexDirection: "column", mb: 5 }}>
         <FormLabel sx={{ mb: 2 }}>Payment Proof</FormLabel>
         <TextField type="file" inputRef={fileRef} />

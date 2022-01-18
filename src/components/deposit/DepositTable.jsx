@@ -38,7 +38,7 @@ const DepositTable = () => {
         // const data = await getDocs(collectionRef);
         onSnapshot(collectionRef, (doc) => {
           doc.forEach((d) => {
-            setDeposits([d.data()]);
+            setDeposits((prevState) => [...prevState, d.data()]);
           });
         });
       } catch (error) {

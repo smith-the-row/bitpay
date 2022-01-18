@@ -38,6 +38,7 @@ const Plan = () => {
           variant="scrollable"
           scrollButtons
           allowScrollButtonsMobile
+          centered
         >
           <Tab
             label="Basic"

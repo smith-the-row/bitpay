@@ -29,7 +29,7 @@ const WalletAddress = () => {
   };
 
   return (
-    <Box sx={{ width: { xs: "80%", md: "100%" } }}>
+    <Box sx={{ width: { xs: "80%", md: "100%" }, overflow: "hidden" }}>
       <Box>
         <Typography variant="h5" component="div" gutterBottom>
           Make Payment

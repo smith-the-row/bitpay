@@ -13,9 +13,11 @@ const Navbar = () => {
     <React.Fragment>
       <nav>
         <div className="container">
-          <div>
-            <h4 className="title">CoinSignalPro</h4>
-          </div>
+          <Link to="/">
+            <div className="img-res">
+              <h1 className="text-success fw-bolder">CoinSignalPro</h1>
+            </div>
+          </Link>
           <div>
             <Link to="/" className="links text-sec">
               Home

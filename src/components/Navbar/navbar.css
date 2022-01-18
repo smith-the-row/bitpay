@@ -76,6 +76,11 @@ nav {
   transition: 560ms ease;
 }
 
+.img-res {
+  width: 20%;
+  height: 50px;
+}
+
 @media screen and (max-width: 780px) {
   .cta-1,
   .cta-2,
