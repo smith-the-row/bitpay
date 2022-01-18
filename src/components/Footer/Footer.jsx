@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+// import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import moment from "moment";
 import "./footer.css";
 
