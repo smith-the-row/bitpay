@@ -10,7 +10,7 @@ const Condition = () => {
         </h5>
         <div className="mt-3">
           {condition.map((c) => (
-            <p className="my-5 text-muted">
+            <p key={c.id} className="my-5 text-muted">
               {c.id}. {c.term}
             </p>
           ))}

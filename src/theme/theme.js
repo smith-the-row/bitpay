@@ -22,6 +22,7 @@ export const theme = createTheme({
     },
     h4: {
       fontFamily: ["Nunito", "sans-serif"].join(","),
+      fontWeight: "bolder",
     },
     caption: {
       fontFamily: ["Nunito", "sans-serif"].join(","),

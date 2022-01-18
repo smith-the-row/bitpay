@@ -4,7 +4,6 @@ import {
   FaDownload,
   FaDatabase,
   FaGift,
-  FaUsers,
   FaCreditCard,
   FaEnvelope,
   FaEnvelopeOpen,
@@ -96,7 +95,7 @@ const Prices = () => {
             <Skeleton variant="rectangular" width="100%" height={90} />
           )}
         </Grid>
-        <Grid item xs={12} md={3}>
+        {/* <Grid item xs={12} md={3}>
           {details ? (
             <Paper sx={{ p: 2 }}>
               <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -114,7 +113,7 @@ const Prices = () => {
           ) : (
             <Skeleton variant="rectangular" width="100%" height={90} />
           )}
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} md={3}>
           {details ? (
             <Paper sx={{ p: 2 }}>
