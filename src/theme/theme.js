@@ -20,6 +20,9 @@ export const theme = createTheme({
     h3: {
       fontFamily: ["Nunito", "sans-serif"].join(","),
     },
+    h4: {
+      fontFamily: ["Nunito", "sans-serif"].join(","),
+    },
     caption: {
       fontFamily: ["Nunito", "sans-serif"].join(","),
     },

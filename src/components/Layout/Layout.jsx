@@ -80,7 +80,12 @@ const Layout = (props) => {
           >
             <MdMenu />
           </IconButton>
-          <Typography variant="h4" noWrap component="h1">
+          <Typography
+            variant="h4"
+            noWrap
+            component="h1"
+            sx={{ p: 3, color: "#198754" }}
+          >
             CoinSignalPro
           </Typography>
         </Toolbar>
