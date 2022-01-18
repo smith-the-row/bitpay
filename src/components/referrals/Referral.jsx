@@ -14,7 +14,7 @@ const Referral = () => {
     });
   };
 
-  const link = `https://www.coinSignalPro/ref/user`;
+  const link = `https://www.coinSignalPro/ref/huiojiniojiojij`;
 
   return (
     <Box>
