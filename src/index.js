@@ -32,6 +32,7 @@ import Invest from "./pages/Invest";
 import Wallets from "./pages/Wallets";
 import TransactionsPage from "./pages/TransactionsPage";
 import Refer from "./pages/Refer";
+import Terms from "./pages/Terms";
 
 // import the user context that will Cover the applications and control authentication state
 import UserProvider from "./context/UserContext";
@@ -54,6 +55,7 @@ ReactDOM.render(
           <Route path="/invest" element={<Invest />} />
           <Route path="/transactions" element={<TransactionsPage />} />
           <Route path="/refer" element={<Refer />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
