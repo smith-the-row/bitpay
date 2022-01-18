@@ -37,7 +37,7 @@ const Address = () => {
             </div>
             <div>
               <h1 className="fs-4">Phone</h1>
-              <p>Call Us Now +1 (403)-596-8123</p>
+              <p>Call Us Now +1 (262)-696-9967</p>
             </div>
           </div>
         </div>
