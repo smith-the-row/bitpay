@@ -38,6 +38,10 @@ const Layout = (props) => {
     navigate("/");
   };
 
+  const goHome = () => {
+    navigate("/dashboard");
+  };
+
   const drawer = (
     <div>
       <List>
@@ -84,7 +88,8 @@ const Layout = (props) => {
             variant="h4"
             noWrap
             component="h1"
-            sx={{ p: 1, color: "#198754" }}
+            onClick={goHome}
+            sx={{ p: 1, color: "#198754", cursor: "pointer" }}
           >
             CoinSignalPro
           </Typography>
