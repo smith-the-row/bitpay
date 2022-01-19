@@ -29,8 +29,9 @@ const Investment = () => {
       // get the user deposit
       const docRef = doc(store, "/users", `${user.email}`);
       const userDetails = await getDoc(docRef);
+      const balanceAmount = userDetails.data().balance;
       const depositedAmount = userDetails.data().deposited;
-      if (amount > depositedAmount) {
+      if (amount > balanceAmount) {
         toast.error("insufficent Fund", {
           theme: "colored",
           position: "bottom-center",
