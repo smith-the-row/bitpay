@@ -31,7 +31,8 @@ const Investment = () => {
       const userDetails = await getDoc(docRef);
       const balanceAmount = userDetails.data().balance;
       const depositedAmount = userDetails.data().deposited;
-      if (amount > balanceAmount) {
+      const totalPackages = userDetails.data().totalPackages;
+      if ((amount > balanceAmount) | (amount > depositedAmount)) {
         toast.error("insufficent Fund", {
           theme: "colored",
           position: "bottom-center",
@@ -40,7 +41,7 @@ const Investment = () => {
       } else {
         await updateDoc(docRef, {
           balance: depositedAmount - amount,
-          totalPackages: 1,
+          totalPackages: totalPackages + 1,
           activePages: plan,
         });
 
