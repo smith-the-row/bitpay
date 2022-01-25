@@ -33,7 +33,7 @@ export const condition = [
   },
   {
     id: 9,
-    term: "Withdrawal of weekly profits must be done twice (2) every month (two weeks profits can only be withdrawn in a month ) for plans ranging from professional plan and abovePlans ranging below professional plan must compound for over five(5) months before due for withdrawal.",
+    term: "Withdrawal of weekly profits must be done twice (2) every month (two weeks profits can only be withdrawn in a month ) for plans ranging from basic plan and above Plans ranging below professional plan must compound for over five(5) months before due for withdrawal.",
   },
   {
     id: 10,
