@@ -52,7 +52,7 @@ export const wallets = [
     icon: tronLogo,
   },
   {
-    coin: "SHIBA ",
+    coin: "SHIBA ERC20",
     address: "0x09a4Ef878099a7891881B83EA9D1F5bec63A0B41",
     addressName: "SHIBA Address",
     icon: shibaLogo,
