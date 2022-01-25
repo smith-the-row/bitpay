@@ -1,16 +1,16 @@
 export const basicPlan = [
-  {
-    id: 1,
-    invest: "100",
-    reward: "240",
-    duration: "48hrs",
-  },
-  {
-    id: 2,
-    invest: "200",
-    reward: "480",
-    duration: "48hrs",
-  },
+  // {
+  //   id: 1,
+  //   invest: "100",
+  //   reward: "240",
+  //   duration: "48hrs",
+  // },
+  // {
+  //   id: 2,
+  //   invest: "200",
+  //   reward: "480",
+  //   duration: "48hrs",
+  // },
   {
     id: 3,
     invest: "300",
