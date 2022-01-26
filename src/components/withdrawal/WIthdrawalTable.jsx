@@ -68,7 +68,7 @@ const WIthdrawalTable = () => {
                   {withdraw.approved ? "Approved" : "Pending"}
                 </TableCell>
                 <TableCell>
-                  {moment(withdraw.date.at).format("MMM Do YY")}
+                  {moment(withdraw.date.at).format("MMM YY DD")}
                 </TableCell>
               </TableRow>
             ))}

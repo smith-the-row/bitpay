@@ -171,7 +171,11 @@ const Withdrawal = () => {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
+            <Typography
+              id="transition-modal-title"
+              variant="subtitle"
+              component="h2"
+            >
               Payment will be sent through your selected method.
             </Typography>
             <Divider />
