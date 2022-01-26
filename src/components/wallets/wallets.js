@@ -28,7 +28,7 @@ export const wallets = [
     icon: ltcLogo,
   },
   {
-    coin: "USDT",
+    coin: "USDT ERC20",
     address: "0x09a4Ef878099a7891881B83EA9D1F5bec63A0B41",
     addressName: "USDT Address",
     icon: usdtLogo,

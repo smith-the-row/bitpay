@@ -9,9 +9,9 @@ import WIthdrawalTable from "../withdrawal/WIthdrawalTable";
 const Panel = (props) => {
   const { children, value, index } = props;
   return (
-    <div hidden={value !== index}>
-      {value === index && <Box sx={{ mt: 4 }}>{children}</Box>}
-    </div>
+    <Box sx={{ width: { xs: "50%", md: "100%" } }}>
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+    </Box>
   );
 };
 

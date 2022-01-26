@@ -20,7 +20,7 @@ const Plan = () => {
 
   return (
     <>
-      <div className="plan" id="plan">
+      <div className="plan">
         <div className="plan__container">
           <div className="plan__title">
             <h1 className="fw-bolder">Choose your Prefered Plan</h1>
