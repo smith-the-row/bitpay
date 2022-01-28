@@ -78,7 +78,7 @@ const DepositTable = () => {
                   {deposit.approved ? "Approved" : "Pending"}
                 </TableCell>
                 <TableCell>
-                  {moment(deposit.date.at).format("MM-DD-YYY")}
+                  {moment(deposit.date.at).format("YYYY/MM/DD")}
                 </TableCell>
               </TableRow>
             ))}
