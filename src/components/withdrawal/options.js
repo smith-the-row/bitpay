@@ -1,7 +1,7 @@
 export const options = [
   {
     name: "Bitcoin",
-    amount: "$2000",
+    amount: "$15000",
     charge: "5%",
     duration: "48hrs",
   },
@@ -13,7 +13,7 @@ export const options = [
   },
   {
     name: "Litecoin",
-    amount: "$1000",
+    amount: "$5000",
     charge: "5%",
     duration: "48hrs",
   },
