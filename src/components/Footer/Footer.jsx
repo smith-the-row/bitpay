@@ -14,12 +14,10 @@ const Footer = () => {
             <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column">
               <h3>About Us</h3>
               <p>
-                CoinSignalPro is one of the leading cryptocurrency mining
-                platforms, offering cryptocurrency mining capacity in every
-                range for absoulte beginners,
-                <br />
-                With cryptocurrency replacing fiat currencies our goal is to
-                make aquiring cryptocurrency easy for everyone
+                We are a US Registered company found by a group of Wall Street
+                high frequency traders. We have 30 years of combined experience
+                trading the cryptocurrency market using cutting edge machine
+                learning algorithms.
               </p>
             </div>
             <div className="col-sm-12 col-md-2 col-lg-2 d-flex flex-column mb-3">

@@ -16,12 +16,16 @@ export const basicPlan = [
     invest: "300",
     reward: "720",
     duration: "48hrs",
+    maintainFee: "$0.05",
+    hashRate: "0.5 KH/s",
   },
   {
     id: 4,
     invest: "400",
     reward: "960",
     duration: "48hrs",
+    maintainFee: "$0.05",
+    hashRate: "0.89 KH/s",
   },
 ];
 // 5% intrest rate

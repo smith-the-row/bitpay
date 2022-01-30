@@ -13,9 +13,15 @@ const BasicPlan = () => {
               <div>
                 <h1 className="fw-bolder fs-1">{`$${plan.invest}`}</h1>
               </div>
+              <div className="my-3">
+                <h2 className="fw-bold fs-3">{plan.hashRate}</h2>
+              </div>
+              <div className="my-2">
+                <p>Maintenance Fees per KH/s/day: {plan.maintainFee}</p>
+              </div>
               <div className="plan-reward">
-                <p>Reward:{`$${plan.reward}`}</p>
-                <p>Duration:{plan.duration}</p>
+                <p>Reward: {`$${plan.reward}`}</p>
+                <p> Contract Duration: {plan.duration}</p>
               </div>
               <div className="my-4">
                 <Link to="/register" className="btn btn-success text-sec">

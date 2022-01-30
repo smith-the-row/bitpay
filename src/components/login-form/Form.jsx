@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
@@ -7,12 +7,10 @@ import {
 } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
-import { Backdrop, CircularProgress } from "@mui/material";
+
 import "./form.css";
 
 const Form = () => {
-  // state for the loading progress
-  const [open, setOpen] = useState(false);
   // navigation
   const navigate = useNavigate();
   // toast config
@@ -62,7 +60,6 @@ const Form = () => {
         });
       }
     }
-    setOpen(true);
   };
 
   const resetPassword = async (e) => {
@@ -133,12 +130,6 @@ const Form = () => {
           </button>
         </div>
       </div>
-      <Backdrop
-        open={open}
-        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      >
-        <CircularProgress color="success" />
-      </Backdrop>
     </div>
   );
 };

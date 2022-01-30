@@ -8,14 +8,12 @@ import {
 import { setDoc, doc } from "firebase/firestore";
 import { auth, store } from "../../firebase";
 import { useNavigate } from "react-router-dom";
-import { Backdrop, CircularProgress } from "@mui/material";
 import "./form.css";
 
 const Form = () => {
   // control the input fields
   const [disable, setDisable] = useState(false);
   const [country, setCountry] = useState([]);
-  const [open, setOpen] = useState(false);
 
   // toast configuration
   toast.configure();
@@ -130,7 +128,6 @@ const Form = () => {
         });
       }
     }
-    setOpen(true);
   };
 
   return (
@@ -223,12 +220,6 @@ const Form = () => {
           </div>
         </div>
       </div>
-      <Backdrop
-        open={open}
-        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      >
-        <CircularProgress color="success" />
-      </Backdrop>
     </div>
   );
 };

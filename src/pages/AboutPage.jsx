@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Info from "../components/Info/Info";
-import Work from "../components/Work/Work";
 import Footer from "../components/Footer/Footer";
 import Questions from "../components/faq/Questions";
 import Navbar from "../components/Navbar/Navbar";
+import Guide from "../components/about-us/Guide";
 
 const AboutPage = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const AboutPage = () => {
     <React.Fragment>
       <Navbar />
       <Info />
-      <Work />
+      <Guide />
       <Questions />
       <Footer />
     </React.Fragment>
