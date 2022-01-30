@@ -21,6 +21,6 @@ export const aboutUs = [
     id: 4,
     title: "Our Values",
     about:
-      "Led by 8 former Morgan Stanley Executives, Phemex's goal is to build the worlds most trustworthy cryptocurrency derivatives trading platform. We leverage a “User-Oriented” approach to develop far more powerful features than any existing exchange. Above all, we place customers first. All of our features and tools are designed with this philosophy in mind. This is why our development team is directly available and constantly gathering feedback, comments, and requests from our community on social media.",
+      "Led by 8 former Morgan Stanley Executives, CoinSignalPro's goal is to build the worlds most trustworthy cryptocurrency derivatives trading platform. We leverage a “User-Oriented” approach to develop far more powerful features than any existing exchange. Above all, we place customers first. All of our features and tools are designed with this philosophy in mind. This is why our development team is directly available and constantly gathering feedback, comments, and requests from our community on social media.",
   },
 ];
