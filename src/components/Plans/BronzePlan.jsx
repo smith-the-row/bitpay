@@ -24,7 +24,7 @@ const BasicPlan = () => {
                 <p>Duration: {plan.duration}</p>
               </div>
               <div className="my-4">
-                <Link to="/register" className="btn btn-success text-sec">
+                <Link to="/register" className="btn btn-primary text-sec">
                   Start Now !!{" "}
                 </Link>
               </div>

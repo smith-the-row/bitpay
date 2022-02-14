@@ -22,11 +22,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #212529;
+  background-color: #0e204e;
 }
 
 .plan__card:hover {
-  background-color: #27ae61;
+  background-color: #0e204e;
 }
 
 .plan__amt {

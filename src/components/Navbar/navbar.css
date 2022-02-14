@@ -8,7 +8,7 @@
 }
 
 nav {
-  background-color: #212529;
+  background-color: #081125;
   color: #f8f8f8;
   font-family: "Nunito", sans-serif;
   position: relative;
@@ -28,7 +28,7 @@ nav {
 .cta-1 {
   margin-right: 1.2rem;
   color: #f8f8f8;
-  background-color: #27ae61;
+  background-color: #4f6ef7;
   padding: 0.6rem 1.4rem;
   border-radius: 0.2rem;
   font-size: 0.8rem;
@@ -37,9 +37,9 @@ nav {
 }
 
 .cta-2 {
-  color: #27ae61;
+  color: #4f6ef7;
   padding: 0.6rem 1.4rem;
-  border: 1px solid #27ae61;
+  border: 1px solid #4f6ef7;
   border-radius: 0.2rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -47,12 +47,12 @@ nav {
 }
 
 .cta-1:hover {
-  color: #27ae61;
+  color: #4f6ef7;
   background-color: #f8f8f8;
 }
 
 .cta-2:hover {
-  color: #27ae61;
+  color: #4f6ef7;
   background-color: #f8f8f8;
   border: none;
 }
@@ -64,7 +64,7 @@ nav {
 
 .sidenav {
   width: 100%;
-  background-color: #212529;
+  background-color: #081125;
   z-index: 4;
   position: absolute;
   left: -999%;

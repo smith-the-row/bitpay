@@ -1,6 +1,7 @@
 .start {
   color: #f4f4f4;
   margin: 4rem auto;
+  background-color: #0e204e;
 }
 
 .start__grid {
@@ -26,7 +27,7 @@
 
 .start__cta:hover {
   background-color: #f4f4ff;
-  color: #27ae61;
+  color: #0e204e;
 }
 
 @media screen and (max-width: 780px) {

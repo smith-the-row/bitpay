@@ -8,7 +8,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <IconContext.Provider value={{ color: "#f4f4f4", size: "2.4rem" }}>
-      <footer className="footer bg-dark">
+      <footer className="footer">
         <div className="container d-flex flex-column">
           <div className="row">
             <div className="col-sm-12 col-md-6 col-lg-6 d-flex flex-column">
@@ -34,11 +34,8 @@ const Footer = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 d-flex flex-column mb-5">
               <h3>Contact Info</h3>
-              <p>info@coinSignalPro.co</p>
-              <p>
-                coinSignalPro Head office US: 2944 N 44th Street,Phoenix,AZ
-                85018
-              </p>
+              <p>info@Bitpay.co</p>
+              <p>Bitpay Head office US: 2944 N 44th Street,Phoenix,AZ 85018</p>
               <p>
                 UK:First Floor ,Omega Building,Smugglers Way,Wandsworth,SW18
               </p>
@@ -63,7 +60,7 @@ const Footer = () => {
           </div> */}
           <div className="text-center mt-3">
             <p>
-              COPYRIGHT © RESVERED coinSignalPro 2014 -{" "}
+              COPYRIGHT © RESVERED Bitpay 2014 -{" "}
               {moment(new Date()).format("YYYY")}
             </p>
           </div>

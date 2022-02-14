@@ -1,7 +1,7 @@
 export const condition = [
   {
     id: 1,
-    term: "By joining our site as a member, you automatically agree to provide your personal details accurately and you automatically agree to the Terms of Service, Privacy and Refund Policy of coinSignalPro. Members that do not agree to any of these Terms of Service, Privacy, and Refund Policy, should stop using our site/service and terminate their account immediately.",
+    term: "By joining our site as a member, you automatically agree to provide your personal details accurately and you automatically agree to the Terms of Service, Privacy and Refund Policy of Bitpay. Members that do not agree to any of these Terms of Service, Privacy, and Refund Policy, should stop using our site/service and terminate their account immediately.",
   },
   {
     id: 2,
@@ -17,11 +17,11 @@ export const condition = [
   },
   {
     id: 5,
-    term: "coinSignalPro will never provide personal information about its members to third parties without the consent of the member unless required by law.",
+    term: "Bitpay will never provide personal information about its members to third parties without the consent of the member unless required by law.",
   },
   {
     id: 6,
-    term: "It is the responsibility of members to keep their personal records up to date and accurate in the member’s area. coinSignalPro will not be responsible for communication errors due to incorrect or out of date contact information. Continued failed attempts to make contact with you may result in the termination of your account.",
+    term: "It is the responsibility of members to keep their personal records up to date and accurate in the member’s area. Bitpay will not be responsible for communication errors due to incorrect or out of date contact information. Continued failed attempts to make contact with you may result in the termination of your account.",
   },
   {
     id: 7,
@@ -29,7 +29,7 @@ export const condition = [
   },
   {
     id: 8,
-    term: "Once you fund deposit into coinSignalPro wallet address ,you must contact the customer care support for immediate funding .",
+    term: "Once you fund deposit into Bitpay wallet address ,you must contact the customer care support for immediate funding .",
   },
   {
     id: 9,
@@ -37,7 +37,7 @@ export const condition = [
   },
   {
     id: 10,
-    term: "All coinSignalPro members must invest at least minimum of $1000 during its months of compounding and it shall be added to you initial starting capital.",
+    term: "All Bitpay members must invest at least minimum of $1000 during its months of compounding and it shall be added to you initial starting capital.",
   },
   {
     id: 11,
@@ -45,6 +45,6 @@ export const condition = [
   },
   {
     id: 12,
-    term: "All members /investors of coinSignalPro must keep to the rules and regulations of the company and we promise to give you our best.",
+    term: "All members /investors of Bitpay must keep to the rules and regulations of the company and we promise to give you our best.",
   },
 ];

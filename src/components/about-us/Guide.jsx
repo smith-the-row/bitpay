@@ -16,7 +16,7 @@ const Guide = () => {
         <h3 className="fw-bolder fs-2">MBS Registration</h3>
         <div>
           <p className="text-muted">
-            CoinSignalPro is the most trustworthy platform. We are now a fully
+            bitpay is the most trustworthy platform. We are now a fully
             registered Money Services Business (MSB) with the Financial Crimes
             Enforcement Network Department. Safely deposit and trade your funds
             on a platform that is entirely worry-free.

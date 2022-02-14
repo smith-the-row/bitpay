@@ -89,9 +89,9 @@ const Layout = (props) => {
             noWrap
             component="h1"
             onClick={goHome}
-            sx={{ p: 1, color: "#198754", cursor: "pointer" }}
+            sx={{ p: 1, color: "#ffff", cursor: "pointer" }}
           >
-            CoinSignalPro
+            Bitpay
           </Typography>
         </Toolbar>
       </AppBar>

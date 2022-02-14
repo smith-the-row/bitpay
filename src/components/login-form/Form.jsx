@@ -93,12 +93,12 @@ const Form = () => {
     <div className="form pd">
       <div className="form__card shadow rounded my-5 p-3">
         <div className="form__title text-center">
-          <Link to="/" className="fs-1 fw-bolder text-main text-success">
-            CoinSignalPro
+          <Link to="/" className="fs-1 fw-bolder text-main text-primary">
+            Bitpay
           </Link>
           <p>
             Click here to{" "}
-            <Link to="/register" className="text-success">
+            <Link to="/register" className="text-primary">
               Create Account
             </Link>
           </p>
@@ -125,7 +125,7 @@ const Form = () => {
               Forgot Password
             </Link>
           </div>
-          <button className="btn btn-success btn-block" onClick={loginUser}>
+          <button className="btn btn-primary btn-block" onClick={loginUser}>
             Login
           </button>
         </div>

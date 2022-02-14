@@ -5,7 +5,7 @@ import "./address.css";
 
 const Address = () => {
   return (
-    <IconContext.Provider value={{ color: "#27ae61", size: "1.8rem" }}>
+    <IconContext.Provider value={{ color: "#081125", size: "1.8rem" }}>
       <div className="address">
         <div className="address__container">
           <div className="address__card">
@@ -15,8 +15,7 @@ const Address = () => {
             <div>
               <h1 className="fs-4">Address</h1>
               <p>
-                coinSignalPro Head office US: 2944 N 44th Street,Phoenix,AZ
-                85018
+                Bitpay Head office US: 2944 N 44th Street,Phoenix,AZ 85018
                 <br />
                 UK:First Floor ,Omega Building,Smugglers Way,Wandsworth,SW18
               </p>
@@ -28,7 +27,7 @@ const Address = () => {
             </div>
             <div>
               <h1 className="fs-4">Email</h1>
-              <p>info@coinSignalPro.co</p>
+              <p>info@Bitpay.co</p>
             </div>
           </div>
           <div className="address__card">

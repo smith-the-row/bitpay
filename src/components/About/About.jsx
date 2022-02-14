@@ -6,7 +6,7 @@ import "./about.css";
 const About = () => {
   return (
     <React.Fragment>
-      <IconContext.Provider value={{ color: "#27ae61", size: "1.8rem" }}>
+      <IconContext.Provider value={{ color: "#0e204e", size: "1.8rem" }}>
         <div className="py-5">
           <div className="container d-flex flex-column">
             <div className="text-center">
@@ -14,8 +14,8 @@ const About = () => {
                 Create your cryptocurrency portfolio today
               </h1>
               <p className="text-muted">
-                CoinSignalPro has a variety of features that make it the best
-                place to start trading
+                Bitpay has a variety of features that make it the best place to
+                start trading
               </p>
             </div>
             <div className="grid mt-4">

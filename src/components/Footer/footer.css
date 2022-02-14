@@ -1,25 +1,21 @@
 .footer {
-    background-color: #39405a;
-    color: white;
-    padding-bottom: 0.6rem;
+  background-color: #081125;
+  color: white;
+  padding-bottom: 0.6rem;
 }
 
-
-
 .footer__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__media {
-    background-color:#27ae61;
-    margin-right: 0.8rem;
-    padding: 0.6rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #081125;
+  margin-right: 0.8rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-

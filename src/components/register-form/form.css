@@ -8,13 +8,13 @@
 }
 
 .form-control {
-  border: 1px solid gray !important;
+  border: 1px solid #0e204e !important;
   outline: none !important;
 }
 
 .form {
-  background-color: #485461;
-  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  background-color: #0e204e;
+  background-image: linear-gradient(315deg, #0e204e 0%, #28313b 74%);
 }
 
 .form__card {

@@ -25,15 +25,14 @@ const Hero = () => {
           </div>
           <div className="container">
             <p className="text-center text-white ">
-              CoinSignalPro Trading Signals is a group of financial and
-              cryptocurrency experts that invest in mining and cryptocurrency
-              trading. We carefully examine the volatility of bitcoin and other
-              crypto currencies, invest and make good profit from our
-              investments.
+              Bitpay Trading Signals is a group of financial and cryptocurrency
+              experts that invest in mining and cryptocurrency trading. We
+              carefully examine the volatility of bitcoin and other crypto
+              currencies, invest and make good profit from our investments.
             </p>
           </div>
           <div className="text-center mx-auto">
-            <Link to="/register" className="btn btn-success fs-5 text-sec">
+            <Link to="/register" className="btn btn-primary fs-5 text-sec">
               Get Started <FaChevronCircleRight className="ms-2" />
             </Link>
           </div>
