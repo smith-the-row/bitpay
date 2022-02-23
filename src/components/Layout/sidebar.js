@@ -19,7 +19,7 @@ export const links = [
     icon: <MdAccountCircle />,
   },
   {
-    text: "Deposit",
+    text: "Fund Wallet",
     path: "/deposit",
     icon: <MdPayment />,
   },
