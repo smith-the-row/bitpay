@@ -5,10 +5,10 @@ import About from "../components/About/About";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Newsletter from "../components/Newsletter/Newsletter";
-import Plan from "../components/Plans/Plan";
 import Reason from "../components/Reason/Reason";
 import Start from "../components/Start/Start";
 import Work from "../components/Work/Work";
+import Plan from "../components/Plan/Plan";
 
 const Home = () => {
   const navigate = useNavigate();

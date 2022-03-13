@@ -35,10 +35,7 @@ const Footer = () => {
             <div className="col-sm-12 col-md-4 col-lg-4 d-flex flex-column mb-5">
               <h3>Contact Info</h3>
               <p>info@Bitpay.co</p>
-              <p>Bitpay Head office US: 2944 N 44th Street,Phoenix,AZ 85018</p>
-              <p>
-                UK:First Floor ,Omega Building,Smugglers Way,Wandsworth,SW18
-              </p>
+              <p>Atlanta,Georgia United States</p>
             </div>
           </div>
           {/* <div className="footer__links">

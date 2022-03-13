@@ -14,11 +14,7 @@ const Address = () => {
             </div>
             <div>
               <h1 className="fs-4">Address</h1>
-              <p>
-                Bitpay Head office US: 2944 N 44th Street,Phoenix,AZ 85018
-                <br />
-                UK:First Floor ,Omega Building,Smugglers Way,Wandsworth,SW18
-              </p>
+              <p>Atlanta,Georgia United States</p>
             </div>
           </div>
           <div className="address__card">
