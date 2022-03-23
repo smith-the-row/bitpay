@@ -13,7 +13,7 @@ export const theme = createTheme({
       fontFamily: ["Josefin Sans", "sans-serif"].join(","),
     },
     body1: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
+      fontFamily: ["Josefin Sans", "sans-serif"].join(","),
     },
     h6: {
       fontFamily: ["Nunito", "sans-serif"].join(","),
