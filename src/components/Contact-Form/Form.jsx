@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import "./form.css";
 import Image from "../../img/contact.png";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const nameRef = useRef();
@@ -10,8 +9,6 @@ const Form = () => {
   const emailRef = useRef();
   const subjectRef = useRef();
   const messageRef = useRef();
-
-  const navigate = useNavigate();
 
   toast.configure();
 
@@ -35,8 +32,6 @@ const Form = () => {
         theme: "colored",
       });
     }
-
-    navigate("/");
   };
 
   return (
