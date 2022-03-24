@@ -24,17 +24,17 @@ const Form = () => {
       !subjectRef.current.value |
       !messageRef.current.value
     ) {
-      toast("Please fill the form correctly", {
+      return toast("Please fill the form correctly", {
         type: "error",
         position: "bottom-center",
         theme: "colored",
       });
+    } else {
+      return toast.success("message sent", {
+        position: "top-center",
+        theme: "colored",
+      });
     }
-
-    toast.success("message sent", {
-      position: "top-center",
-      theme: "colored",
-    });
 
     navigate("/");
   };
