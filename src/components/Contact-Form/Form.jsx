@@ -35,6 +35,8 @@ const Form = () => {
       position: "top-center",
       theme: "colored",
     });
+
+    navigate("/");
   };
 
   return (
@@ -66,7 +68,9 @@ const Form = () => {
             <textarea name="message" ref={messageRef}></textarea>
           </div>
           <div>
-            <button className="form__btn">Send</button>
+            <button className="form__btn" onClick={sendMessage}>
+              Send
+            </button>
           </div>
         </div>
       </div>

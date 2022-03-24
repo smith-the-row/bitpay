@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 d-flex flex-column mb-5">
               <h3>Contact Info</h3>
-              <p>info@Bitpay.co</p>
+              <p>info.bitpayinvestment@gmail.com</p>
               <p>Atlanta,Georgia United States</p>
             </div>
           </div>
