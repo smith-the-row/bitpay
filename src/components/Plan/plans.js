@@ -1,10 +1,10 @@
 export const plans = [
-  {
-    title: "Basic",
-    Duration: "3-7 days",
-    price: "$100-$1,000",
-    min: "100",
-  },
+  // {
+  //   title: "Basic",
+  //   Duration: "3-7 days",
+  //   price: "$100-$1,000",
+  //   min: "100",
+  // },
   {
     title: "Bronze",
     Duration: "3-7 days",
