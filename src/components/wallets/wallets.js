@@ -47,13 +47,13 @@ export const wallets = [
   },
   {
     coin: "TRON ",
-    address: "TNBAZ5yWsB6ZSgRnHAZdSTC6WMzxmKtGNe",
+    address: "TStrfndMyftHEmkyPeSb852kXvtcveHTsu",
     addressName: "TRON Address",
     icon: tronLogo,
   },
   {
-    coin: "SHIBA ERC20",
-    address: "0x09a4Ef878099a7891881B83EA9D1F5bec63A0B41",
+    coin: "SHIBA",
+    address: "0xF7Dbe4a00630874B94D7D5ae2A8735d1398a5AA3",
     addressName: "SHIBA Address",
     icon: shibaLogo,
   },
