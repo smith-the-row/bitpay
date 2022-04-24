@@ -11,37 +11,37 @@ import btccLogo from "../../img/btcc.png";
 export const wallets = [
   {
     coin: "Bitcoin",
-    address: "bc1q28fv5ra3p39533xgxv79sgkj5lquwrkwtas56l",
+    address: "bc1q5uxe8mr4ctffc8wyg0jtuueszuej3aw72y4adk",
     addressName: "BTC Address",
     icon: BtcLogo,
   },
   {
     coin: "Ethereum ",
-    address: "0x09a4Ef878099a7891881B83EA9D1F5bec63A0B41",
+    address: "0xF7Dbe4a00630874B94D7D5ae2A8735d1398a5AA3",
     addressName: "ETH Address:",
     icon: ethLogo,
   },
   {
     coin: "Litecoin",
-    address: "ltc1qeld7q7459rns4us209vpwq55nxgpd7jx70vjrm",
+    address: "ltc1q4ghgj47qd822292dl90f00hte275yx8fmcs4mq",
     addressName: "LTC Address",
     icon: ltcLogo,
   },
   {
-    coin: "USDT ERC20",
-    address: "0x09a4Ef878099a7891881B83EA9D1F5bec63A0B41",
+    coin: "USDT",
+    address: "TStrfndMyftHEmkyPeSb852kXvtcveHTsu",
     addressName: "USDT Address",
     icon: usdtLogo,
   },
   {
     coin: "BNB",
-    address: "bnb1uey67k7eampcdm6s7wpnjvlpx5e5yu9qq3jpq7",
+    address: "bnb10nqychwd78thk88nlpytzpdl4fls78mvfhmkzr",
     addressName: "BNB Address",
     icon: bnbLogo,
   },
   {
     coin: "DOGE ",
-    address: "DCaLx2QdSgZouxWicvXfZ72XB8NwDyzJbL",
+    address: "DRSy7UAqRz5ZkwAXFYvn1qydy2Ugiqdxy7",
     addressName: "Dogecoin Address",
     icon: dogeLogo,
   },
@@ -59,7 +59,7 @@ export const wallets = [
   },
   {
     coin: "BITCOIN CASH",
-    address: "qrc4t9xs3ntgrp67t6wyjhrna27k4yq62vkn0du8yp",
+    address: "qqkcahum4ma9c97hwjcrfje8up9p3ksmxyperqc255",
     addressName: "BCH Address",
     icon: btccLogo,
   },
