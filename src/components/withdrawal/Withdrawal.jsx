@@ -24,7 +24,6 @@ const Withdrawal = () => {
   // form state
   const addressRef = useRef();
   const [value, setValue] = useState("");
-  const [amt, setAmt] = useState("");
   // function to set modal open and close
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
@@ -38,43 +37,32 @@ const Withdrawal = () => {
   const getValue = (id) => {
     const method = options.filter((option) => id === option.name);
     setValue(method[0].name);
-    setAmt(method[0].amount);
     setOpen(true);
   };
 
   // function to get the method of withdraw and address
   const withdrawMethod = async () => {
     try {
+      //  first create the collection ref
       const collectionRef = collection(
         store,
         "users",
-        `${user.email}`,
-        "withdraws"
+        `/${user.email}`,
+        "withdrawal"
       );
-
-      if (!addressRef.current.value) {
-        toast.error("Please Fill out the correct form", {
-          theme: "colored",
-          position: "bottom-center",
-        });
-      }
-
       await addDoc(collectionRef, {
-        method: value,
-        address: addressRef.current.value,
-        amount: amt,
-        approved: false,
+        amount: 3000,
         date: serverTimestamp(),
+        address: addressRef.current.value,
+        approved: false,
+        method: value,
       });
 
-      toast.success("Request Submitted", {
-        theme: "colored",
-        position: "top-center",
-      });
+      toast.success("Order Sent", { theme: "colored", position: "top-center" });
 
       navigate("/dashboard");
-    } catch (error) {
-      console.log(error);
+    } catch (e) {
+      console.log(e);
     }
   };
 

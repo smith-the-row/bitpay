@@ -27,7 +27,7 @@ const WIthdrawalTable = () => {
           store,
           "users",
           `${user.email}`,
-          "withdraws"
+          "withdrawal"
         );
         onSnapshot(collectionRef, (docs) => {
           docs.forEach((d) => {
