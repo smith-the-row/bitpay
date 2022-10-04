@@ -52,7 +52,7 @@ const Plan = () => {
                       gutterBottom
                       textAlign="center"
                     >
-                      ROI:15%
+                      ROI:{plan.roi}
                     </Typography>
                   </Box>
                   <Box sx={{ mt: 2, mb: 2 }}>
